@@ -32,6 +32,8 @@ public class Human {
         return false;
     }
 
+    //dá se generovat equals() a hashCode() v IntelliJ - pravým tlačítkem a "Generate" - v úkolu se dělá toto jenom pro JEDEN identifikátor, hint hint
+
     @Override
     public String toString() {
         return "Human{" +
