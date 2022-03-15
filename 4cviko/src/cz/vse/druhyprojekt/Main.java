@@ -33,7 +33,7 @@ public class Main {
         }
 
         int index = 0;
-        while (true) { //když platí, tak while běží - když neplatí, while se zastaví
+        while (index < 500) { //když platí, tak while běží - když neplatí, while se zastaví
             System.out.println(index++);
         }
 
