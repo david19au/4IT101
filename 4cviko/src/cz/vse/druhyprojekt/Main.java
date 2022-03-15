@@ -18,6 +18,15 @@ public class Main {
         for (String Bruh : list) {
             System.out.println("ForEach: " + Bruh);
         }
+
+//        String[] field = new String[]{"Bruh 1", "Bruh 2"}; // můžu přidat hned věci do pole a vytvoří se mi o n-velikosti
+        String[] field = new String[5]; // hranaté závorky vyznačují pole, uvnitř těch závorek dávám počet hodnot uvnitř
+        field[2] = "lmao 1";
+        field[2] = null; // vrácení do defaultního stavu
+        int fieldLength = field.length;
+        field[fieldLength-1] = "lmao 1"; //přídám do posledního místa v poli hodnotu
+
+
     }
 }
 
