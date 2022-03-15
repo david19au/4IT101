@@ -30,10 +30,14 @@ public class Main {
         for (int i = 0; i < field.length; i++) { //for cyklus bude běžet tak dlouho, dokud "i" bude menší jak velikost pole
             String item = field[i]; // item = položka
             System.out.println("Ukázkový školní For cyklus: " + item);
-
         }
 
-    }
+        int index = 0;
+        while (true) { //když platí, tak while běží - když neplatí, while se zastaví
+            System.out.println(index++);
+        }
+
+        }
 }
 
 //
