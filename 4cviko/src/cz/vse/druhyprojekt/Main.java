@@ -19,13 +19,19 @@ public class Main {
             System.out.println("ForEach: " + Bruh);
         }
 
-//        String[] field = new String[]{"Bruh 1", "Bruh 2"}; // můžu přidat hned věci do pole a vytvoří se mi o n-velikosti
-        String[] field = new String[5]; // hranaté závorky vyznačují pole, uvnitř těch závorek dávám počet hodnot uvnitř
+//        String[] field = new String[]{"Bruh 1", "Bruh 2"}; // můžu přidat hned položku do pole a vytvoří se mi o n-velikosti
+        String[] field = new String[5]; // hranaté závorky vyznačují pole, uvnitř těch závorek dávám počet položek uvnitř
         field[2] = "lmao 1";
         field[2] = null; // vrácení do defaultního stavu
         int fieldLength = field.length;
-        field[fieldLength-1] = "lmao 1"; //přídám do posledního místa v poli hodnotu
+        field[fieldLength-1] = "lmao 1"; //přídám položku do posledního místa v poli hodnotu
 
+
+        for (int i = 0; i < field.length; i++) { //for cyklus bude běžet tak dlouho, dokud "i" bude menší jak velikost pole
+            String item = field[i]; // item = položka
+            System.out.println("Ukázkový školní For cyklus: " + item);
+
+        }
 
     }
 }
