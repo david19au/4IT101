@@ -14,6 +14,10 @@ public class Main {
         list.add("Bruh 3"); //3
         list.add("Bruh 4"); //4
         list.add("Bruh 5"); //5
+
+        for (String Bruh : list) {
+            System.out.println("ForEach: " + Bruh);
+        }
     }
 }
 
