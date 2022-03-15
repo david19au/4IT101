@@ -32,5 +32,11 @@ public class Human {
         return false;
     }
 
-
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
