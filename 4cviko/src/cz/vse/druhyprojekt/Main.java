@@ -33,13 +33,13 @@ public class Main {
         }
 
         int index = 0;
-        while (index < 0) { //když platí, tak while běží - když neplatí, while se zastaví
+        while (index < 500) { //když platí, tak while běží - když neplatí, while se zastaví
             System.out.println("While " + index++);
         }
 
         do {
             System.out.println("Do while: " + index++);
-        } while (index < 0);
+        } while (index < 0); //Do-While cyklus - nejdřív dělám, pak se ptám
 
         }
 }
