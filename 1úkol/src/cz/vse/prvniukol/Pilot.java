@@ -1,10 +1,10 @@
 package cz.vse.prvniukol;
 
 public class Pilot {
-    private String firstName = "Jan";
-    private String lastName = "Novák";
-    private int age = 69;
-    private String rank = "Captain";
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String rank;
 
     public String getFirstName() {
         return firstName;
