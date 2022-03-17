@@ -1,10 +1,10 @@
 package cz.vse.prvniukol;
 
 public class Pilot {
-    private String firstName = "firstName";
-    private String lastName = "lastName";
-    private int age = 0;
-    private String rank = "rank";
+    private String firstName = "Jan";
+    private String lastName = "Novák";
+    private int age = 69;
+    private String rank = "Captain";
 
     public String getFirstName() {
         return firstName;
@@ -22,13 +22,15 @@ public class Pilot {
         return rank;
     }
 
+    public Pilot(String firstName, String lastName, int age, String rank) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.rank = rank;
+    }
+
     @Override
     public String toString() {
-        return "Pilot{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", rank='" + rank + '\'' +
-                '}';
+        return rank + " " + firstName + " "+ lastName + " (" + age + ") ";
     }
 }
