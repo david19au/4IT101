@@ -1,3 +1,10 @@
+/**
+ *
+ * @author Trong Dat Luu @david19au
+ * @version 1.0
+ *
+ */
+
 package cz.vse.prvniukol;
 
 public class Pilot {
