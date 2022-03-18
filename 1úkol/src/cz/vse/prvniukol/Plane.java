@@ -32,4 +32,13 @@ public class Plane {
         this.identificationNumber = identificationNumber;
         this.manufacturer = manufacturer;
     }
+
+    @Override
+    public String toString() {
+        if (pilot == null) {
+            return "The plane made by " + getManufacturer() + " with an identification number of " + getIdentificationNumber() + " does not have a pilot.";
+        }
+        return "The plane made by " + getManufacturer() + " with an identification number " + getIdentificationNumber() + " is flown by " + getPilot() + " .";
+    }
+
 }
