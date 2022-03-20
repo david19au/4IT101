@@ -7,6 +7,8 @@
 
 package cz.vse.prvniukol;
 
+import java.util.Objects;
+
 public class Plane {
     private int identificationNumber;
     private String manufacturer;
@@ -41,4 +43,16 @@ public class Plane {
         return "The plane made by " + getManufacturer() + " with an identification number " + getIdentificationNumber() + " is flown by " + getPilot() + ".";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Plane plane = (Plane) o;
+        return identificationNumber == plane.identificationNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(identificationNumber);
+    }
 }
