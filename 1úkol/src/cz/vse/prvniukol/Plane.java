@@ -38,7 +38,7 @@ public class Plane {
         if (pilot == null) {
             return "The plane made by " + getManufacturer() + " with an identification number of " + getIdentificationNumber() + " does not have a pilot.";
         }
-        return "The plane made by " + getManufacturer() + " with an identification number " + getIdentificationNumber() + " is flown by " + getPilot() + " .";
+        return "The plane made by " + getManufacturer() + " with an identification number " + getIdentificationNumber() + " is flown by " + getPilot() + ".";
     }
 
 }

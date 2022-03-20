@@ -38,6 +38,6 @@ public class Pilot {
 
     @Override
     public String toString() {
-        return rank + " " + firstName + " "+ lastName + " (" + age + ") ";
+        return rank + " " + firstName + " "+ lastName + " (" + age + ")";
     }
 }

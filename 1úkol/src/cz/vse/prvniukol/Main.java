@@ -16,5 +16,9 @@ public class Main {
         System.out.println(pilot.getLastName());
         System.out.println(pilot.getRank());
         System.out.println(pilot);
+
+        cz.vse.prvniukol.Plane plane = new Plane(420,"BruhManufacturer");
+        plane.setPilot(pilot);
+        System.out.println(plane);
     }
 }
