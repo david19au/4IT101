@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class AnimalEvidence {
 
-    private Set<Animal> animals = new HashSet<>();
+    private Set<Animal> animals = new HashSet<>(); //set je interface
 
     // add + remove vrací boolean, pokud se podaří tak true, pokud ne, tak false
     public boolean addAnimal(Animal animal) {
