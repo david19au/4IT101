@@ -1,6 +1,5 @@
-package cz.vse.treticviceni;
+package cz.vse.tretiprojekt;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
@@ -39,7 +38,7 @@ public class AnimalEvidenceTest {
     }
 
     @Test
-    public void testanimalsOwnded() {
+    public void testAnimalsOwned() {
         AnimalEvidence animalEvidence = new AnimalEvidence();
         Owner owner1 = new Owner("Karel", 18);
         Owner owner2 = new Owner("Jana", 19);

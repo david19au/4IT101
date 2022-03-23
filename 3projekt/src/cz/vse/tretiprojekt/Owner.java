@@ -1,4 +1,4 @@
-package cz.vse.treticviceni;
+package cz.vse.tretiprojekt;
 
 public class Owner {
 

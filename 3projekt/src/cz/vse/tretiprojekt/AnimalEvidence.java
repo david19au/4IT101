@@ -1,4 +1,4 @@
-package cz.vse.treticviceni;
+package cz.vse.tretiprojekt;
 
 import java.util.Collection;
 import java.util.HashSet;
