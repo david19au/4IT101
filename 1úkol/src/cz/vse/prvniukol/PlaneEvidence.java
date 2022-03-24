@@ -30,7 +30,7 @@ public class PlaneEvidence {
     public Collection<Plane> getUnoccupiedPlanes() {
         Set<Plane> unoccupiedPlanes = new HashSet<>();
         for (Plane plane : planeList) {
-            if (plane.getPilot().equals(null)) {
+            if (plane.getPilot() == null) {
                 unoccupiedPlanes.add(plane);
             }
         }

@@ -22,7 +22,11 @@ public class Main {
         System.out.println(plane0);
 
         cz.vse.prvniukol.Plane plane1 = new Plane(69, "BruhManufacturer");
-        System.out.println(plane1);
         System.out.println(plane1.getPilot());
+        System.out.println(plane1);
+
+        cz.vse.prvniukol.PlaneEvidence planeEvidence = new PlaneEvidence();
+        planeEvidence.addPlane(plane1);
+        System.out.println(planeEvidence.getUnoccupiedPlanes().size());
     }
 }

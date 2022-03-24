@@ -33,6 +33,7 @@ public class Plane {
     public Plane(int identificationNumber, String manufacturer) {
         this.identificationNumber = identificationNumber;
         this.manufacturer = manufacturer;
+        this.pilot = null;
     }
 
     @Override
