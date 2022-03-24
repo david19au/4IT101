@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class PlaneEvidence {
 
-    Collection<Plane> planeList;
+    public Collection<Plane> planeList;
 
     public PlaneEvidence () {
         planeList = new HashSet<>();
@@ -47,30 +47,3 @@ public class PlaneEvidence {
     }
 }
 
-
-/*
-    private Set<Plane> planes = new HashSet<>();
-    public boolean addPlane(Plane plane){
-        return planes.add(plane);
-    }
-
-    public Collection<Plane> returnPlaneList() {
-        Set<Plane> toReturnList = new HashSet<>();
-        for (Plane plane : planes) {
-            toReturnList.add(plane);
-        }
-        return toReturnList;
-    }
-
-    public Collection<Plane> returnUnusedPlaneList() {
-        Set<Plane> toReturnUnusedList = new HashSet<>();
-        for (Plane plane : planes) {
-            if (plane.getPilot().equals(null)) {
-                toReturnUnusedList.add(plane);
-            }
-        }
-        return toReturnUnusedList;
-    }
-
-    public Plane returnPlane(int identificationNumber) {
-*/
