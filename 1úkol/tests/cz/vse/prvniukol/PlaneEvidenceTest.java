@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PlaneEvidenceTest {
 
     @Test
-    public void testAddPlane() {
+    public void testEvidence() {
         PlaneEvidence planeEvidence = new PlaneEvidence();
         Pilot pilot1 = new Pilot("Sussy", "Baka", 69, "Captain");
         Pilot pilot2 = new Pilot("Walter", "White", 420, "First Officer");
@@ -19,6 +19,9 @@ public class PlaneEvidenceTest {
 
         assertEquals(true, planeEvidence.addPlane(plane2));
         assertEquals(false, planeEvidence.addPlane(plane2));
+
+        assertNotNull(planeEvidence.getPlaneList());
+
     }
 
 }
