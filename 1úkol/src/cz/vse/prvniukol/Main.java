@@ -23,5 +23,6 @@ public class Main {
 
         cz.vse.prvniukol.Plane plane1 = new Plane(69, "BruhManufacturer");
         System.out.println(plane1);
+        System.out.println(plane1.getPilot());
     }
 }
