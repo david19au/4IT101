@@ -24,7 +24,7 @@ public class Main {
         field[2] = "lmao 1";
         field[2] = null; // vrácení do defaultního stavu
         int fieldLength = field.length;
-        field[fieldLength-1] = "lmao 1"; //přídám položku do posledního místa v poli hodnotu
+        field[fieldLength - 1] = "lmao 1"; //přídám položku do posledního místa v poli hodnotu
 
 
         for (int i = 0; i < field.length; i++) { //for cyklus bude běžet tak dlouho, dokud "i" bude menší jak velikost pole
@@ -41,7 +41,7 @@ public class Main {
             System.out.println("Do while: " + index++);
         } while (index < 0); //Do-While cyklus - nejdřív dělám, pak se ptám
 
-        }
+    }
 }
 
 //

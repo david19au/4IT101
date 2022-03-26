@@ -1,8 +1,6 @@
 /**
- *
  * @author Trong Dat Luu @david19au
  * @version 1.0
- *
  */
 
 package cz.vse.prvniukol;
@@ -27,7 +25,7 @@ public class PlaneEvidenceTest {
         assertTrue(planeEvidence.addPlane(plane2));
         assertFalse(planeEvidence.addPlane(plane2));
 
-        assertEquals(2,planeEvidence.getPlaneList().size());
+        assertEquals(2, planeEvidence.getPlaneList().size());
     }
 
     @Test
@@ -51,7 +49,7 @@ public class PlaneEvidenceTest {
         Pilot pilot1 = new Pilot("Sussy", "Baka", 69, "Captain");
         plane1.setPilot(pilot1);
         planeEvidence.addPlane(plane1);
-        assertEquals(0,planeEvidence.getUnoccupiedPlanes().size());
+        assertEquals(0, planeEvidence.getUnoccupiedPlanes().size());
     }
 
     @Test

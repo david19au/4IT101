@@ -1,8 +1,6 @@
 /**
- *
  * @author Trong Dat Luu @david19au
  * @version 1.0
- *
  */
 
 package cz.vse.prvniukol;
@@ -15,11 +13,11 @@ public class PlaneEvidence {
 
     public Collection<Plane> planeList;
 
-    public PlaneEvidence () {
+    public PlaneEvidence() {
         planeList = new HashSet<>();
     }
 
-    public boolean addPlane(Plane plane){
+    public boolean addPlane(Plane plane) {
         return planeList.add(plane);
     }
 
@@ -37,7 +35,7 @@ public class PlaneEvidence {
         return unoccupiedPlanes;
     }
 
-    public Plane returnPlane (int identificationNumber) {
+    public Plane returnPlane(int identificationNumber) {
         for (Plane plane : planeList) {
             if (plane.getIdentificationNumber() == identificationNumber) {
                 return plane;
