@@ -26,7 +26,10 @@ public class Main {
         System.out.println(plane1);
 
         cz.vse.prvniukol.PlaneEvidence planeEvidence = new PlaneEvidence();
+        planeEvidence.addPlane(plane0);
         planeEvidence.addPlane(plane1);
         System.out.println(planeEvidence.getUnoccupiedPlanes().size());
+        System.out.println(planeEvidence.planeList);
+
     }
 }
