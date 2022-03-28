@@ -19,8 +19,8 @@ public class Mistnost {
 
     public Vec odeberVec(String nazevVeci) {
         for (Vec vec : veciMistnost) {
-            if (vec.equals(nazevVeci)) {
-                veciMistnost.remove((nazevVeci));
+            if (vec.getNazev().equals(nazevVeci)) {
+                veciMistnost.remove((vec));
                 return vec;
             }
         }
