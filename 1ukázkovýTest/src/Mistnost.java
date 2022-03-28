@@ -1,5 +1,6 @@
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 
 public class Mistnost {
     private String nazevMistnosti;
@@ -9,6 +10,7 @@ public class Mistnost {
     }
 
     public Collection<Vec> veciMistnost;
+
     public Mistnost() {
         veciMistnost = new HashSet<>();
     }
@@ -27,4 +29,14 @@ public class Mistnost {
         return null;
     }
 
+    public Collection<Vec> sebratelneVeci() {
+        Set<Vec> sebratVec = new HashSet<>();
+        for (Vec vec : veciMistnost) {
+            if (vec.isSebratelna()) { //v podstatě vec.isSebratelna() == true
+                sebratVec.add(vec);
+            }
+
+        }
+        return sebratVec;
+    }
 }
