@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/4IT101.iml" filepath="$PROJECT_DIR$/.idea/4IT101.iml" />
       <module fileurl="file://$PROJECT_DIR$/4cviko/4cviko.iml" filepath="$PROJECT_DIR$/4cviko/4cviko.iml" />
       <module fileurl="file://$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" filepath="$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zakladAdventury/zakladAdventury.iml" filepath="$PROJECT_DIR$/zakladAdventury/zakladAdventury.iml" />
     </modules>
   </component>
 </project>
