@@ -4,7 +4,6 @@ import cz.vse.adventura.logika.Hra;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;
 
@@ -57,12 +56,12 @@ public class HraTest {
     public void testPrubehHry() {
         assertEquals("domeček", hra1.getHerniPlan().getAktualniProstor().getNazev());
         hra1.zpracujPrikaz("jdi les");
-        assertEquals(false, hra1.konecHry());
+        assertFalse(hra1.konecHry());
         assertEquals("les", hra1.getHerniPlan().getAktualniProstor().getNazev());
         hra1.zpracujPrikaz("jdi hluboký_les");
-        assertEquals(false, hra1.konecHry());
+        assertFalse(hra1.konecHry());
         assertEquals("hluboký_les", hra1.getHerniPlan().getAktualniProstor().getNazev());
         hra1.zpracujPrikaz("konec");
-        assertEquals(true, hra1.konecHry());
+        assertTrue(hra1.konecHry());
     }
 }
