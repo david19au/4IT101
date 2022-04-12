@@ -2,7 +2,13 @@ package cz.vse.adventura.logika;
 
 public class PrikazSeber implements IPrikaz{
 
-    private static final String NAZEV = "seber";
+    private static final String NAZEV = "seber"; // PŘÍKAZ JE CASE SENSITIVE S VĚCMA
+
+    private HerniPlan herniPlan;
+
+    public PrikazSeber(HerniPlan herniPlan) {
+        this.herniPlan = herniPlan;
+    }
 
     @Override
     public String provedPrikaz(String... parametry) {
@@ -12,7 +18,20 @@ public class PrikazSeber implements IPrikaz{
             return "Mohu sebrat pouze jednu věc.";
         }
 
-        return null;
+        String nazevVeci = parametry[0];
+
+        Vec vec = herniPlan.getAktualniProstor().vratVec(nazevVeci);
+
+        if (vec == null) {
+            return "Vec s nazvem " + nazevVeci + " se v prostoru nenachází.";
+        } else if (!vec.isPrenositelna()) {
+            return "Tuhle věc nevezmeš.";
+        }
+
+        herniPlan.getAktualniProstor().odebratVec(nazevVeci);
+        //TODO vložit věc do inventáře
+
+        return "Sebral jsi věc " + nazevVeci + " .";
     }
 
 

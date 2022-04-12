@@ -36,8 +36,8 @@ public class HerniPlan {
         Prostor les = new Prostor("les","les s jahodami, malinami a pramenem vody");
         Prostor hlubokyLes = new Prostor("hluboký_les","temný les, ve kterém lze potkat vlka");
 
-        Vec koste = new Vec("Koště", true);
-        Vec skrin =  new Vec("Skříň", false);
+        Vec koste = new Vec("Koste", true);
+        Vec skrin =  new Vec("Skrin", false);
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
         domecek.setVychod(les);
