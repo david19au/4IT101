@@ -130,7 +130,8 @@ public class Prostor {
      */
     public String dlouhyPopis() {
         return "Jsi v mistnosti/prostoru " + popis + ".\n"
-                + popisVychodu();
+                + popisVychodu() + "\n"
+                + popisVeci();
     }
 
     /**
@@ -146,6 +147,15 @@ public class Prostor {
         }
         return vracenyText;
     }
+
+    public String popisVeci() {
+        String vracenyText = "Věci:";
+        for (String jmenoVeci : veci.keySet()) {
+            vracenyText += " " + jmenoVeci;
+    }
+        return vracenyText;
+    }
+
 
     /**
      * Vrací prostor, který sousedí s aktuálním prostorem a jehož název je zadán

@@ -35,7 +35,10 @@ public class HerniPlan {
         Prostor jeskyne = new Prostor("jeskyně","stará plesnivá jeskyně");
         Prostor les = new Prostor("les","les s jahodami, malinami a pramenem vody");
         Prostor hlubokyLes = new Prostor("hluboký_les","temný les, ve kterém lze potkat vlka");
-        
+
+        Vec koste = new Vec("Koště", true);
+        Vec skrin =  new Vec("Skříň", false);
+
         // přiřazují se průchody mezi prostory (sousedící prostory)
         domecek.setVychod(les);
         les.setVychod(domecek);
@@ -45,7 +48,10 @@ public class HerniPlan {
         hlubokyLes.setVychod(chaloupka);
         jeskyne.setVychod(hlubokyLes);
         chaloupka.setVychod(hlubokyLes);
-                
+
+        domecek.setVec(koste);
+        domecek.setVec(skrin);
+
         aktualniProstor = domecek;  // hra začíná v domečku       
     }
     
