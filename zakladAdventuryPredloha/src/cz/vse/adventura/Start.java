@@ -27,6 +27,12 @@ public class Start
         
         IHra hra = new Hra();
         TextoveRozhrani ui = new TextoveRozhrani(hra);
-        ui.hraj();
+
+        if(args.length == 0) {
+            ui.hraj();
+        } else {
+            ui.hrajZeSouboru(args[0]);
+        }
+
     }
 }

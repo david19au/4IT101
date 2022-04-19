@@ -60,12 +60,37 @@ public class TextoveRozhrani {
     }
 
     public void hrajZeSouboru(String soubor) {
-        try (BufferedReader cteni = new BufferedReader(new FileReader(soubor))) {
+        try (BufferedReader cteni = new BufferedReader(new FileReader(soubor)); //try with resources aby nedošlo k memory leaks - filereader přečte bity/znak v souboru - buffered reader může číst klidně celý řádek
+            PrintWriter zapis = new PrintWriter(new FileWriter("vystup.txt"))) { //"append: true" připojí data do souboru vystup.txt, pokud existuje (nepřepíše celý soubor)
+            System.out.println(hra.vratUvitani());
+            zapis.println(hra.vratUvitani());
+
+            String radek = cteni.readLine();
+            while (radek != null && !hra.konecHry()) { //pokud řádek není null anebo pokud hra neskončila už
+                System.out.println("> " + radek);
+                zapis.println("> " + radek);
+
+                String odpoved = hra.zpracujPrikaz(radek);
+                System.out.println(odpoved);
+                zapis.println(odpoved);
+
+                radek = cteni.readLine();
+            }
+
+            System.out.println(hra.vratEpilog());
+            zapis.println(hra.vratEpilog());
+
+
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            File file = new File(soubor);
+            System.out.println("Soubor " + soubor + " nebyl nalezen!");
+            System.out.println("Soubor byl hledán na adrese: " + file.getAbsolutePath());
+            //e.printStackTrace();
         } catch (IOException e) { //input output exception
             e.printStackTrace();
+        } finally { //finally se spustí při jakémkoliv případě / spustí se !pokaždé! po catch blocích
+            System.out.println("FINALLY");
         }
     }
 

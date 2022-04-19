@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/4cviko/4cviko.iml" filepath="$PROJECT_DIR$/4cviko/4cviko.iml" />
       <module fileurl="file://$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" filepath="$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" />
       <module fileurl="file://$PROJECT_DIR$/zakladAdventury/zakladAdventury.iml" filepath="$PROJECT_DIR$/zakladAdventury/zakladAdventury.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" filepath="$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" />
     </modules>
   </component>
 </project>
