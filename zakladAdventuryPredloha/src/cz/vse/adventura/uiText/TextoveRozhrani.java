@@ -1,6 +1,7 @@
 package cz.vse.adventura.uiText;
 
 
+import java.io.*;
 import java.util.Scanner;
 
 import cz.vse.adventura.logika.IHra;
@@ -56,6 +57,16 @@ public class TextoveRozhrani {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         return scanner.nextLine();
+    }
+
+    public void hrajZeSouboru(String soubor) {
+        try (BufferedReader cteni = new BufferedReader(new FileReader(soubor))) {
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) { //input output exception
+            e.printStackTrace();
+        }
     }
 
 }
