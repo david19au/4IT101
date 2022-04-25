@@ -1,4 +1,4 @@
-package cz.vse.adventura.logika;
+package cz.vse.zapomneni.logika;
 
 
 /**
@@ -9,8 +9,8 @@ package cz.vse.adventura.logika;
  *  propojuje je vzájemně pomocí východů 
  *  a pamatuje si aktuální prostor, ve kterém se hráč právě nachází.
  *
- *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- *@version    pro školní rok 2016/2017
+ *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Trong Dat Luu
+ *@version    1.0
  */
 public class HerniPlan {
     

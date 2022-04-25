@@ -1,10 +1,10 @@
-package cz.vse.adventura.uiText;
+package cz.vse.zapomneni.uiText;
 
 
 import java.io.*;
 import java.util.Scanner;
 
-import cz.vse.adventura.logika.IHra;
+import cz.vse.zapomneni.logika.IHra;
 
 /**
  *  Class TextoveRozhrani

@@ -1,4 +1,4 @@
-package cz.vse.adventura.logika;
+package cz.vse.zapomneni.logika;
 
 public class PrikazSeber implements IPrikaz{
 

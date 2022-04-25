@@ -28,7 +28,7 @@ public class Main {
         //3 cviko
         Garage garage = new Garage();
         //cz.vse.treti.Car car = new cz.vse.treti.Car("Skoda");
-        Car car = null;
+        Car car = new Car("Škoda");
         Motorbike motorbike = new Motorbike();
         Bus bus = new Bus();
 
