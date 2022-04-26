@@ -33,7 +33,7 @@ class PrikazJdi implements IPrikaz {
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0) {
             // pokud chybí druhé slovo (sousední prostor), tak ....
-            return "Kam mám jít? Musíš zadat jméno východu";
+            return "Kam mám jít? Musíte zadat jméno východu";
         }
 
         String smer = parametry[0];
@@ -42,7 +42,7 @@ class PrikazJdi implements IPrikaz {
         Prostor sousedniProstor = plan.getAktualniProstor().vratSousedniProstor(smer);
 
         if (sousedniProstor == null) {
-            return "Tam se odsud jít nedá!";
+            return "Tam se odsud nedostanu!";
         }
         else {
             plan.setAktualniProstor(sousedniProstor);

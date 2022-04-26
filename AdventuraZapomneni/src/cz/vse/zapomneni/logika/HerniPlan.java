@@ -30,30 +30,59 @@ public class HerniPlan {
      */
     private void zalozProstoryHry() {
         // vytvářejí se jednotlivé prostory
-        Prostor domecek = new Prostor("domeček","domeček, ve kterém bydlí Karkulka");
-        Prostor chaloupka = new Prostor("chaloupka", "chaloupka, ve které bydlí babička Karkulky");
-        Prostor jeskyne = new Prostor("jeskyně","stará plesnivá jeskyně");
-        Prostor les = new Prostor("les","les s jahodami, malinami a pramenem vody");
-        Prostor hlubokyLes = new Prostor("hluboký_les","temný les, ve kterém lze potkat vlka");
+        Prostor domov = new Prostor("domov","domov, ve kterém bydlí postava");
+        Prostor kuchyn = new Prostor("kuchyn", "kuchyň postavy");
 
-        Vec koste = new Vec("koště", true);
-        Vec skrin =  new Vec("skříň", false);
+        Prostor ulice = new Prostor("ulice","ulice bytu kde postava bydlí");
+
+        Prostor kamaraduvByt = new Prostor("kamarádův_byt","příchod do kamarádova bytu");
+
+        Prostor hlavniNadrazi = new Prostor("hlavní_nádraží","hlavní nádraží s vlaky a turisty");
+        Prostor koleje = new Prostor("koleje","koleje na hlavním nádraží");
+
+        Prostor skola = new Prostor("škola","vysoká škola kam chodí postava");
+        Prostor strechaSkoly = new Prostor("střecha_školy","střecha vysoké školy");
+        Prostor psycholog = new Prostor("psycholog","psycholog ve škole");
+
+        Prostor vaclavskeNamesti = new Prostor("václavské_náměstí","václavské náměstí plné lidí");
+        Prostor drogovyDealer = new Prostor("drogový_dealer","dočasný ráj pro postavu");
+        Prostor karluvMost = new Prostor("karlův_most","karlův most s lidmi kolem");
+
+        Vec nuz = new Vec("nůž", false);
+        Vec penize =  new Vec("peníze", true);
+        Vec pevnaLinka = new Vec("pevná_linka", false);
+        Vec lano = new Vec("lano", false);
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
-        domecek.setVychod(les);
-        les.setVychod(domecek);
-        les.setVychod(hlubokyLes);
-        hlubokyLes.setVychod(les);
-        hlubokyLes.setVychod(jeskyne);
-        hlubokyLes.setVychod(chaloupka);
-        jeskyne.setVychod(hlubokyLes);
-        chaloupka.setVychod(hlubokyLes);
+        domov.setVychod(kuchyn);
+        domov.setVychod(ulice);
+        kuchyn.setVychod(domov);
+        ulice.setVychod(domov);
+        ulice.setVychod(kamaraduvByt);
+        ulice.setVychod(vaclavskeNamesti);
+        ulice.setVychod(hlavniNadrazi);
+        ulice.setVychod(skola);
+        hlavniNadrazi.setVychod(koleje);
+        hlavniNadrazi.setVychod(ulice);
+        koleje.setVychod(hlavniNadrazi);
+        kamaraduvByt.setVychod(ulice);
+        vaclavskeNamesti.setVychod(ulice);
+        vaclavskeNamesti.setVychod(drogovyDealer);
+        vaclavskeNamesti.setVychod(karluvMost);
+        skola.setVychod(psycholog);
+        skola.setVychod(strechaSkoly);
+        skola.setVychod(ulice);
+
+
 
         // přiřazuju věci k prostorům
-        domecek.setVec(koste);
-        domecek.setVec(skrin);
 
-        aktualniProstor = domecek;  // hra začíná v domečku       
+        kuchyn.setVec(nuz);
+        kuchyn.setVec(penize);
+        domov.setVec(pevnaLinka);
+        domov.setVec(lano);
+
+        aktualniProstor = domov;  // hra začíná v domečku
     }
     
     /**

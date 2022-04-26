@@ -12,8 +12,8 @@ class PrikazNapoveda implements IPrikaz {
     
     private static final String NAZEV = "nápověda";
     private SeznamPrikazu platnePrikazy;
-    
-    
+
+
      /**
     *  Konstruktor třídy
     *  
@@ -33,10 +33,10 @@ class PrikazNapoveda implements IPrikaz {
      */
     @Override
     public String provedPrikaz(String... parametry) {
-        return "Tvým úkolem je dovést Červenou Karkulku z domečku\n"
-        + "až k babičce, která bydlí v chaloupce za lesem.\n"
+        return "Vaším úkolem je se vžít do postavy a vykonávat akce, \n"
+        + "které uznáte za vhodné.\n"
         + "\n"
-        + "Můžeš zadat tyto příkazy:\n"
+        + "Můžete zadat tyto příkazy:\n"
         + platnePrikazy.vratNazvyPrikazu();
     }
     

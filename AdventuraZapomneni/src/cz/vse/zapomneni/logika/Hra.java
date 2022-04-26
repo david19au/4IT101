@@ -33,8 +33,14 @@ public class Hra implements IHra {
      *  Vrátí úvodní zprávu pro hráče.
      */
     public String vratUvitani() {
-        return "Vítejte!\n" +
-               "Toto je příběh o Červené Karkulce, babičce a vlkovi.\n" +
+        return "Vítejte ve hře Zapomnění!\n" +
+               "\n" +
+               "Je zima a píše se rok 2006. Jste student vysoké školy a žijete sami na bytě v Praze. Praha není vaším rodným městem a s rodiči nejste v kontaktu již dlouho kvůli rodinnému konfliktu. \n" +
+               "V Praze nikoho moc neznáte a žijete samotářský život. Nedávno Vás vyhodili i z práce a ocitáte se v situaci, kdy jste bez příjmů a snažíte se ušetřit na každé koruně.  \n" +
+               "Ve škole se Vám hromadí resty a nedokážete kvůli okolní situaci se soustředit na studium.  \n" +
+               "Situaci přestáváte zvládat a nevíte co dál.  \n" +
+               "V hlavě máte zafixováno, že si stejně ani nikdo nevšimne, pokud byste „zmizeli“…  \n" +
+               "\n" +
                "Napište 'nápověda', pokud si nevíte rady, jak hrát dál.\n" +
                "\n" +
                herniPlan.getAktualniProstor().dlouhyPopis();

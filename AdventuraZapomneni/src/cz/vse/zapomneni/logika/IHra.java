@@ -2,10 +2,6 @@
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package cz.vse.zapomneni.logika;
 
-
-
-
-
 /**
  *  Rozhraní které musí implementovat hra, je na ně navázáno uživatelské rozhraní
  *

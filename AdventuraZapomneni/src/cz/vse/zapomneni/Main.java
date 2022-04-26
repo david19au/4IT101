@@ -27,7 +27,7 @@ public class Main
         if(args.length == 0) {
             ui.hraj();
         } else {
-            ui.hrajZeSouboru(args[0]);
+            ui.hrajZeSouboru(args[0]); //hrát předem dané scénário ze souboru
         }
 
     }

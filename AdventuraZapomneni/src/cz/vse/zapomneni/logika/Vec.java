@@ -17,4 +17,5 @@ public class Vec {
     public boolean isPrenositelna() {
         return prenositelna;
     }
+
 }

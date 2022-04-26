@@ -129,7 +129,7 @@ public class Prostor {
      * @return Dlouhý popis prostoru
      */
     public String dlouhyPopis() {
-        return "Jsi v mistnosti/prostoru " + popis + ".\n"
+        return "Jste v mistnosti/prostoru " + popis + ".\n"
                 + popisVychodu() + "\n"
                 + popisVeci();
     }
@@ -147,6 +147,7 @@ public class Prostor {
         }
         return vracenyText;
     }
+
 
     public String popisVeci() {
         String vracenyText = "Věci:";
