@@ -1,9 +1,10 @@
 package cz.david19au.soubory;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         File soubor = new File(args[0]);
 
         if (args.length != 1) {
