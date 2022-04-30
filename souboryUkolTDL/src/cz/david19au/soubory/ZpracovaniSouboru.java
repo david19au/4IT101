@@ -37,7 +37,7 @@ public class ZpracovaniSouboru {
     }
 
     public static List<LogProcessor> LogsFilterDateTimeOperation(List<LogProcessor> logProcessors) {
-        List<LogProcessor> logCount = logProcessors.stream().filter(logProcessor -> (logProcessor.ïsInHourRange(10, 14) && logProcessor.isDefinedOperation("OPTION"))).collect(Collectors.toList());
+        List<LogProcessor> logCount = logProcessors.stream().filter(logProcessor -> (logProcessor.isInHourRange(10, 14) && logProcessor.isDefinedOperation("OPTION"))).collect(Collectors.toList());
         logCount.stream().forEach(logProcessor -> {
             System.out.println(logProcessor.toString());
         });

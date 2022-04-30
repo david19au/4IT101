@@ -20,7 +20,7 @@ public class LogProcessor {
 
     }
 
-    public boolean ïsInHourRange (int upperRange, int lowerRange) {
+    public boolean isInHourRange(int upperRange, int lowerRange) {
         return ((lowerRange * 60) <= (hour * 60 + minute) && (upperRange * 60) >= (hour * 60 + minute)); // *60 cuz z hodin počítám minuty
     }
 
