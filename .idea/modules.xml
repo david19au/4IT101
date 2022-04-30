@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/lambdaCviko/lambdaCviko.iml" filepath="$PROJECT_DIR$/lambdaCviko/lambdaCviko.iml" />
       <module fileurl="file://$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" filepath="$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" />
       <module fileurl="file://$PROJECT_DIR$/souboryUkolTDL/souboryUkolTDL.iml" filepath="$PROJECT_DIR$/souboryUkolTDL/souboryUkolTDL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tempModulUkol/tempModulUkol.iml" filepath="$PROJECT_DIR$/tempModulUkol/tempModulUkol.iml" />
       <module fileurl="file://$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" filepath="$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" />
     </modules>
   </component>

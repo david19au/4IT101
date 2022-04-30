@@ -20,7 +20,7 @@ public class LogProcessor {
 
     }
 
-    public boolean isInHourRange (int upperRange, int lowerRange) {
+    public boolean ïsInHourRange (int upperRange, int lowerRange) {
         return ((lowerRange * 60) <= (hour * 60 + minute) && (upperRange * 60) >= (hour * 60 + minute)); // *60 cuz z hodin počítám minuty
     }
 
@@ -32,4 +32,5 @@ public class LogProcessor {
     public String toString() {
         return day + " " + month + " " + year + " " + hour + " " + minute + " " + ipAddress + " " + operation;
     }
+
 }
