@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class ZpracovaniSouboru {
 
     public static void zpracovani(File soubor) throws FileNotFoundException {
-        List<Log> logy = new ArrayList<>();
+        List<LogProcessor> logy = new ArrayList<>();
 
         Scanner scan = new Scanner(soubor);
         int index = 0;
@@ -15,7 +15,7 @@ public class ZpracovaniSouboru {
             String radek = scan.nextLine();
             try {
                 String[] dataZRadku = radek .split(" ");
-                logy.add(new Log(
+                logy.add(new LogProcessor(
                         Integer.parseInt(dataZRadku[0]),
                         Integer.parseInt(dataZRadku[1]),
                         Integer.parseInt(dataZRadku[2]),
@@ -29,16 +29,16 @@ public class ZpracovaniSouboru {
             }
             index++;
         }
-        List<Log> vyfiltrovaneLogy = HandleLogDTOs(logy);
+        List<LogProcessor> vyfiltrovaneLogy = HandleLogDTOs(logy);
         System.out.println("Zpracováno bylo " + index + " řádků.");
         System.out.println("Je " + logy.stream().count() + " vyfiltrovaných logů.");
         System.out.println("Vyfiltrovaných řádků je " + vyfiltrovaneLogy.stream().count() + ".");
     }
 
-    public static List<Log> HandleLogDTOs(List<Log> logs) {
-        List<Log> vyfiltrovaneLogy = logs.stream().filter(log -> (log.JeMeziHodinama(10, 14) && log.JeOperace("OPTIONS"))).collect(Collectors.toList());
-        vyfiltrovaneLogy.stream().forEach(log -> {
-            System.out.println(log.toString());
+    public static List<LogProcessor> HandleLogDTOs(List<LogProcessor> logProcessors) {
+        List<LogProcessor> vyfiltrovaneLogy = logProcessors.stream().filter(logProcessor -> (logProcessor.isInHourRange(10, 14) && logProcessor.isOperation("OPTIONS"))).collect(Collectors.toList());
+        vyfiltrovaneLogy.stream().forEach(logProcessor -> {
+            System.out.println(logProcessor.toString());
         });
 
         return vyfiltrovaneLogy;
