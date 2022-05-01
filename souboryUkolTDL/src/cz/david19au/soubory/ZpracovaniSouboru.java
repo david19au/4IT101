@@ -15,7 +15,7 @@ public class ZpracovaniSouboru {
         while (scanner1.hasNextLine()) {
             String line = scanner1.nextLine();
             try {
-                String[] lineInputs = line.split(" ");
+                String[] lineInputs = line.split(" "); //mezera
                 logs.add(new LogProcessor(
                         Integer.parseInt(lineInputs[0]),
                         Integer.parseInt(lineInputs[1]),
@@ -33,14 +33,12 @@ public class ZpracovaniSouboru {
         }
         List<LogProcessor> logCount = LogsFilterDateTimeOperation(logs);
         System.out.println("Zpracováno bylo " + index + " řádků.");
-        System.out.println("Je " + logCount.stream().count() + " vyfiltrovaných logů.");
+        System.out.println("Je " + logCount.size() + " vyfiltrovaných logů.");
     }
 
     public static List<LogProcessor> LogsFilterDateTimeOperation(List<LogProcessor> logProcessors) {
         List<LogProcessor> logCount = logProcessors.stream().filter(logProcessor -> (logProcessor.isInHourRange(14, 10) && logProcessor.isDefinedOperation("OPTIONS"))).collect(Collectors.toList());
-        logCount.stream().forEach(logProcessor -> {
-            System.out.println(logProcessor.toString());
-        });
+        logCount.forEach(logProcessor -> System.out.println(logProcessor.toString()));
 
         return logCount;
 
