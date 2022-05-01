@@ -24,7 +24,7 @@ public class LogProcessor {
         return ((lowerRange * 60) <= (hour * 60 + minute) && (upperRange * 60) >= (hour * 60 + minute)); // *60 cuz z hodin počítám minuty
     }
 
-    public boolean isDefinedOperation (String definedOperation) {
+    public boolean isDefinedOperation(String definedOperation) {
         return operation.equals(definedOperation);
     }
 
