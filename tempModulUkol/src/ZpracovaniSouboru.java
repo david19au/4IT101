@@ -36,7 +36,7 @@ public class ZpracovaniSouboru {
     }
 
     public static List<Log> HandleLogDTOs(List<Log> logs) {
-        List<Log> vyfiltrovaneLogy = logs.stream().filter(log -> (log.JeMeziHodinama(10, 14) && log.JeOperace("OPTION"))).collect(Collectors.toList());
+        List<Log> vyfiltrovaneLogy = logs.stream().filter(log -> (log.JeMeziHodinama(10, 14) && log.JeOperace("OPTIONS"))).collect(Collectors.toList());
         vyfiltrovaneLogy.stream().forEach(log -> {
             System.out.println(log.toString());
         });
