@@ -1,6 +1,7 @@
 /**
  * @author Trong Dat Luu @david19au
  * @version 1.0
+ * Soubor s logem přidejte do rootu a jako spouštěcí argumenty nastavte prosím jméno souboru včetně jeho přípony.
  */
 
 package cz.david19au.soubory;
