@@ -1,3 +1,8 @@
+/**
+ * @author Trong Dat Luu @david19au
+ * @version 1.0
+ */
+
 package cz.david19au.soubory;
 
 public class LogProcessor {

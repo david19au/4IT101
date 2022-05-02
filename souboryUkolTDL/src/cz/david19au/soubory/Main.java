@@ -1,13 +1,17 @@
+/**
+ * @author Trong Dat Luu @david19au
+ * @version 1.0
+ */
+
 package cz.david19au.soubory;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         if (args.length != 1) {
-            System.out.println("Bylo zadáno více argumentů nebo nebyl zadán žádný, zadejte prosím pouze 1 argument.");
+            System.out.println("Nebyl zadán žádný argument nebo jich bylo zadáno více, zadejte prosím pouze 1 argument.");
             System.exit(1);
         }
 

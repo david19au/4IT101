@@ -1,3 +1,8 @@
+/**
+ * @author Trong Dat Luu @david19au
+ * @version 1.0
+ */
+
 package cz.david19au.soubory;
 
 import java.io.*;
@@ -8,9 +13,14 @@ import java.util.stream.Collectors;
 
 public class ZpracovaniSouboru {
 
-    public static void zpracovani(File soubor) throws FileNotFoundException {
+    public static void zpracovani(File soubor) {
         List<LogProcessor> logs = new ArrayList<>();
-        Scanner scanner1 = new Scanner(soubor);
+        Scanner scanner1;
+        try {
+            scanner1 = new Scanner(soubor);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         int index = 0;
         while (scanner1.hasNextLine()) {
             String line = scanner1.nextLine();
