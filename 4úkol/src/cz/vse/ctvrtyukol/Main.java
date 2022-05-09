@@ -1,5 +1,5 @@
 /**
- * @author Trong Dat Luu @david19au
+ * @author Trong Dat Luu @david19au, Adam Schindler, Hana Žahourová
  * @version 1.0
  */
 
