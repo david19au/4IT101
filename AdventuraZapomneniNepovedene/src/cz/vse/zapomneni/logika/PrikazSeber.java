@@ -14,7 +14,7 @@ public class PrikazSeber implements IPrikaz{
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0) {
             return "Nenapsali jste co mám sebrat.";
-        } else if (parametry.length > 2) {
+        } else if (parametry.length > 1) {
             return "Mohu sebrat pouze jednu věc.";
         }
 
@@ -28,8 +28,9 @@ public class PrikazSeber implements IPrikaz{
             return "Tuhle věc nedokážu vzít.";
         }
 
+
         herniPlan.getAktualniProstor().odebratVec(nazevVeci);
-        //TODO vložit věc do inventáře
+
 
         return "Sebral jsem věc " + nazevVeci + ".";
     }

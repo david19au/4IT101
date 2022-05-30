@@ -4,10 +4,12 @@ public class Vec {
 
     private final String nazev;
     private final boolean prenositelna;
+    private final boolean pouzitelna;
 
-    public Vec(String nazev, boolean prenositelna) {
+    public Vec(String nazev, boolean prenositelna, boolean pouzitelna) {
         this.nazev = nazev;
         this.prenositelna = prenositelna;
+        this.pouzitelna = pouzitelna;
     }
 
     public String getNazev() {
@@ -16,6 +18,10 @@ public class Vec {
 
     public boolean isPrenositelna() {
         return prenositelna;
+    }
+
+    public boolean isPouzitelna() {
+        return pouzitelna;
     }
 
 }

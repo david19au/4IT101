@@ -35,6 +35,7 @@ public class Prostor {
         this.nazev = nazev;
         this.popis = popis;
         vychody = new HashSet<>();
+        veci = new HashMap<>();
     }
 
     /**

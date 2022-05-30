@@ -30,12 +30,12 @@ public class HerniPlan {
      */
     private void zalozProstoryHry() {
         // vytvářejí se jednotlivé prostory
-        Prostor domov = new Prostor("domov","domov, ve kterém bydlí postava");
-        Prostor kuchyn = new Prostor("kuchyn", "kuchyň postavy");
+        Prostor domov = new Prostor("domov","domov, ve kterém bydlí postava.\nV obývacím pokoji se nachází funkční pevná linka, přes kterou můžete zavolat svým rodičům a ve skříni máte lano.\nMůžete také jít ven na ulici se projít anebo se kouknout do kuchyně..");
+        Prostor kuchyn = new Prostor("kuchyň", ", kde má postava prázdnou lednici a na kuchyňské lince nůž.\nTaké zde nacházíte poslední úspory.");
 
-        Prostor ulice = new Prostor("ulice","ulice bytu kde postava bydlí");
+        Prostor ulice = new Prostor("ulice","ulice bytu kde postava bydlí.\nMáte možnost jít zpět domů, ke kamarádovi domů, na hlavní nádraží, do školy anebo na Václavské náměstí.");
 
-        Prostor kamaraduvByt = new Prostor("kamarádův_byt","příchod do kamarádova bytu");
+        Prostor kamaraduvByt = new Prostor("kamarádův_byt","vchod do kamarádova bytu.\nNejste si jistí jestli Vás vůbec má kamarád rád a jestli Vás bere jako kamaráda. Můžete mu avšak ale stále zazvonit.");
 
         Prostor hlavniNadrazi = new Prostor("hlavní_nádraží","hlavní nádraží s vlaky a turisty");
         Prostor koleje = new Prostor("koleje","koleje na hlavním nádraží");
@@ -48,10 +48,11 @@ public class HerniPlan {
         Prostor drogovyDealer = new Prostor("drogový_dealer","dočasný ráj pro postavu");
         Prostor karluvMost = new Prostor("karlův_most","karlův most s lidmi kolem");
 
-        Vec nuz = new Vec("nůž", false);
-        Vec penize =  new Vec("peníze", true);
-        Vec pevnaLinka = new Vec("pevná_linka", false);
-        Vec lano = new Vec("lano", false);
+        Vec nuz = new Vec("nůž", false,true);
+        Vec penize =  new Vec("peníze", true, true);
+        Vec pevnaLinka = new Vec("pevná_linka", false, true);
+        Vec lano = new Vec("lano", false, true);
+        Vec zvonek = new Vec("zvonek", false, true);
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
         domov.setVychod(kuchyn);
@@ -74,13 +75,14 @@ public class HerniPlan {
         skola.setVychod(ulice);
 
 
-
         // přiřazuju věci k prostorům
 
         kuchyn.setVec(nuz);
         kuchyn.setVec(penize);
         domov.setVec(pevnaLinka);
         domov.setVec(lano);
+        kamaraduvByt.setVec(zvonek);
+
 
         aktualniProstor = domov;  // hra začíná v domečku
     }
