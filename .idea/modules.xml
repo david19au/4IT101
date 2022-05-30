@@ -9,11 +9,11 @@
       <module fileurl="file://$PROJECT_DIR$/3projekt/3projekt.iml" filepath="$PROJECT_DIR$/3projekt/3projekt.iml" />
       <module fileurl="file://$PROJECT_DIR$/4cviko/4cviko.iml" filepath="$PROJECT_DIR$/4cviko/4cviko.iml" />
       <module fileurl="file://$PROJECT_DIR$/4úkol/4úkol.iml" filepath="$PROJECT_DIR$/4úkol/4úkol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AdventuraZapomneni/AdventuraZapomneni.iml" filepath="$PROJECT_DIR$/AdventuraZapomneni/AdventuraZapomneni.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdventuraZapomneniNepovedene/AdventuraZapomneniNepovedene.iml" filepath="$PROJECT_DIR$/AdventuraZapomneniNepovedene/AdventuraZapomneniNepovedene.iml" />
       <module fileurl="file://$PROJECT_DIR$/lambdaCviko/lambdaCviko.iml" filepath="$PROJECT_DIR$/lambdaCviko/lambdaCviko.iml" />
       <module fileurl="file://$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" filepath="$PROJECT_DIR$/prvniTest_nakupniKosik/prvniTest_nakupniKosik.iml" />
       <module fileurl="file://$PROJECT_DIR$/souboryUkolTDL/souboryUkolTDL.iml" filepath="$PROJECT_DIR$/souboryUkolTDL/souboryUkolTDL.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" filepath="$PROJECT_DIR$/zakladAdventuryPredloha/zakladAdventuryPredloha.iml" />
     </modules>
   </component>
 </project>
