@@ -1,10 +1,10 @@
-package cz.vse.zapomneni.uiText;
+package cz.vse.zapomneninepovedene.uiText;
 
 
 import java.io.*;
 import java.util.Scanner;
 
-import cz.vse.zapomneni.logika.IHra;
+import cz.vse.zapomneninepovedene.logika.IHra;
 
 /**
  *  Class TextoveRozhrani

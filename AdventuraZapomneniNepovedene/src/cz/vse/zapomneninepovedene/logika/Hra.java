@@ -1,4 +1,4 @@
-package cz.vse.zapomneni.logika;
+package cz.vse.zapomneninepovedene.logika;
 
 /**
  *  Třída Hra - třída představující logiku adventury.

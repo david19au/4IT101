@@ -1,8 +1,8 @@
-package cz.vse.zapomneni;
+package cz.vse.zapomneninepovedene;
 
-import cz.vse.zapomneni.logika.Hra;
-import cz.vse.zapomneni.logika.IHra;
-import cz.vse.zapomneni.uiText.TextoveRozhrani;
+import cz.vse.zapomneninepovedene.logika.Hra;
+import cz.vse.zapomneninepovedene.logika.IHra;
+import cz.vse.zapomneninepovedene.uiText.TextoveRozhrani;
 
 /*******************************************************************************
  * Třída  Start je hlavní třídou projektu,

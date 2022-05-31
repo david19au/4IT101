@@ -1,20 +1,21 @@
-package cz.vse.zapomneni.logika;
-
+package cz.vse.zapomneninepovedene.logika;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /*******************************************************************************
- * Testovací třída ProstorTest slouží ke komplexnímu otestování
- * třídy Prostor
+ * Testovací třída HraTest slouží ke komplexnímu otestování
+ * třídy Hra
  *
  * @author    Jarmila Pavlíčková
- * @version   pro skolní rok 2016/2017
+ * @version  pro školní rok 2016/2017
  */
-public class ProstorTest
-{
+public class HraTest {
+    private Hra hra1;
+
     //== Datové atributy (statické i instancí)======================================
 
     //== Konstruktory a tovární metody =============================================
@@ -29,6 +30,7 @@ public class ProstorTest
      */
     @Before
     public void setUp() {
+        hra1 = new Hra();
     }
 
     /***************************************************************************
@@ -42,18 +44,23 @@ public class ProstorTest
 
     //== Vlastní testovací metody ==================================================
 
-    /**
-     * Testuje, zda jsou správně nastaveny průchody mezi prostory hry. Prostory
-     * nemusí odpovídat vlastní hře, 
+    /***************************************************************************
+     * Testuje průběh hry, po zavolání každěho příkazu testuje, zda hra končí
+     * a v jaké aktuální místnosti se hráč nachází.
+     * Při dalším rozšiřování hry doporučujeme testovat i jaké věci nebo osoby
+     * jsou v místnosti a jaké věci jsou v batohu hráče.
+     * 
      */
     @Test
-    public  void testLzeProjit() {		
-        Prostor prostor1 = new Prostor("hala", "vstupní hala budovy VŠE na Jižním městě");
-        Prostor prostor2 = new Prostor("bufet", "bufet, kam si můžete zajít na svačinku");
-        prostor1.setVychod(prostor2);
-        prostor2.setVychod(prostor1);
-        assertEquals(prostor2, prostor1.vratSousedniProstor("bufet"));
-        assertNull(prostor2.vratSousedniProstor("pokoj"));
+    public void testPrubehHry() {
+        assertEquals("domeček", hra1.getHerniPlan().getAktualniProstor().getNazev());
+        hra1.zpracujPrikaz("jdi les");
+        assertFalse(hra1.konecHry());
+        assertEquals("les", hra1.getHerniPlan().getAktualniProstor().getNazev());
+        hra1.zpracujPrikaz("jdi hluboký_les");
+        assertFalse(hra1.konecHry());
+        assertEquals("hluboký_les", hra1.getHerniPlan().getAktualniProstor().getNazev());
+        hra1.zpracujPrikaz("konec");
+        assertTrue(hra1.konecHry());
     }
-
 }

@@ -1,4 +1,4 @@
-package cz.vse.zapomneni.logika;
+package cz.vse.zapomneninepovedene.logika;
 
 import org.junit.Before;
 import org.junit.Test;

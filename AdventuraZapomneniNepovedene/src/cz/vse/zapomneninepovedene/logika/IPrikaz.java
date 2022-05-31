@@ -1,4 +1,4 @@
-package cz.vse.zapomneni.logika;
+package cz.vse.zapomneninepovedene.logika;
 
 /**
  *  Třída implementující toto rozhraní bude ve hře zpracovávat jeden konkrétní příkaz.
