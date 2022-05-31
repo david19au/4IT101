@@ -3,20 +3,26 @@ package cz.vse.zapomneni.logika;
 import java.util.Objects;
 
 public class Vec {
-    private String nazev;
-    private boolean prenositelna;
+    private final String nazev;
+    private final boolean sebratelna;
+    private final boolean pouzitelna;
 
-    public Vec(String nazev, boolean prenositelna) {
+    public Vec(String nazev, boolean sebratelna, boolean pouzitelna) {
         this.nazev = nazev;
-        this.prenositelna = prenositelna;
+        this.sebratelna = sebratelna;
+        this.pouzitelna = pouzitelna;
     }
 
     public String getNazev() {
         return nazev;
     }
 
-    public boolean isPrenositelna() {
-        return prenositelna;
+    public boolean isSebratelna() {
+        return sebratelna;
+    }
+
+    public boolean isPouzitelna() {
+        return pouzitelna;
     }
 
     @Override

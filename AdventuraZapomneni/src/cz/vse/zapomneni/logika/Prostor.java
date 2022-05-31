@@ -38,6 +38,7 @@ public class Prostor {
         this.nazev = nazev;
         this.popis = popis;
         vychody = new HashSet<>();
+        veci = new HashSet<>();
     }
 
     /**
@@ -119,7 +120,8 @@ public class Prostor {
      */
     public String dlouhyPopis() {
         return "Jste v mistnosti/prostoru " + popis + ".\n"
-                + popisVychodu();
+                + popisVychodu()
+                + "\n" + popisVeci();
     }
 
     /**
@@ -129,9 +131,17 @@ public class Prostor {
      * @return Popis východů - názvů sousedních prostorů
      */
     private String popisVychodu() {
-        String vracenyText = "východy:";
+        String vracenyText = "Východy:";
         for (Prostor sousedni : vychody) {
             vracenyText += " " + sousedni.getNazev();
+        }
+        return vracenyText;
+    }
+
+    public String popisVeci() {
+        String vracenyText = "Věci:";
+        for (Vec vec : veci) {
+            vracenyText += " " + vec.getNazev();
         }
         return vracenyText;
     }

@@ -24,15 +24,15 @@ public class PrikazSeber implements IPrikaz {
         if (vecCoSeMaSebrat == null) {
             return "Tohle tu není.";
         }
-        if (!(vecCoSeMaSebrat.isPrenositelna())) {
+        if (!(vecCoSeMaSebrat.isSebratelna())) {
             herniPlan.getAktualniProstor().pridejVec(vecCoSeMaSebrat);
             return "Tuhle věc nemůžeš sebrat.";
-        } else if (vecCoSeMaSebrat.isPrenositelna() && !(inventar.dostMista())) {
+        } else if (vecCoSeMaSebrat.isSebratelna() && !(inventar.dostMista())) {
             herniPlan.getAktualniProstor().pridejVec(vecCoSeMaSebrat);
             return "Tohle už neponeseš, nemáš místo kam věc dát.";
         } else {
             inventar.vlozeniVeciDoInv(vecCoSeMaSebrat);
-            return "Sebral jsi " + vecCoSeMaSebrat + ".";
+            return "Sebral jsi " + jmenoVeciCoSeMaSebrat + ".";
         }
     }
 

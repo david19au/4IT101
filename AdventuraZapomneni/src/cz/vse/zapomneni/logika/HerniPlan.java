@@ -68,6 +68,18 @@ public class HerniPlan {
         skola.setVychod(ulice);
                 
         aktualniProstor = domov;  // hra začíná v domě postavy
+
+        Vec nuz = new Vec("nůž", true,true);
+        Vec penize =  new Vec("peníze", true, false);
+        Vec pevnaLinka = new Vec("pevná_linka", false, true);
+        Vec lano = new Vec("lano", false, true);
+        Vec zvonek = new Vec("zvonek", false, true);
+
+        kuchyn.pridejVec(nuz);
+        kuchyn.pridejVec(penize);
+        domov.pridejVec(pevnaLinka);
+        domov.pridejVec(lano);
+        kamaraduvByt.pridejVec(zvonek);
     }
     
     /**

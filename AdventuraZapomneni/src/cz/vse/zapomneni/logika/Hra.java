@@ -13,6 +13,8 @@ package cz.vse.zapomneni.logika;
  */
 
 public class Hra implements IHra {
+
+    private Inventar inventar;
     private SeznamPrikazu platnePrikazy;    // obsahuje seznam přípustných příkazů
     private HerniPlan herniPlan;
     private boolean konecHry = false;
@@ -23,9 +25,11 @@ public class Hra implements IHra {
     public Hra() {
         herniPlan = new HerniPlan();
         platnePrikazy = new SeznamPrikazu();
+        inventar = new Inventar();
         platnePrikazy.vlozPrikaz(new PrikazNapoveda(platnePrikazy));
         platnePrikazy.vlozPrikaz(new PrikazJdi(herniPlan));
         platnePrikazy.vlozPrikaz(new PrikazZavolat(herniPlan));
+        platnePrikazy.vlozPrikaz(new PrikazSeber(herniPlan, inventar));
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
     }
 
