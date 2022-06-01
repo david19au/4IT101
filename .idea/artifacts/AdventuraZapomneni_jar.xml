@@ -2,6 +2,9 @@
   <artifact type="jar" name="AdventuraZapomneni:jar">
     <output-path>$PROJECT_DIR$/AdventuraZapomneni/out/artifacts/AdventuraZapomneni_jar</output-path>
     <root id="archive" name="AdventuraZapomneni.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/AdventuraZapomneni/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="AdventuraZapomneni" />
     </root>
   </artifact>
