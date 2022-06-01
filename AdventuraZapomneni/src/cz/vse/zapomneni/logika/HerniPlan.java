@@ -30,7 +30,7 @@ public class HerniPlan {
      */
     private void zalozProstoryHry() {
         // vytvářejí se jednotlivé prostory
-        Prostor domov = new Prostor("domov","domov, ve kterém bydlí postava.\nV obývacím pokoji se nachází funkční pevná linka, přes kterou můžete zavolat svým rodičům a ve skříni máte lano.\nMůžete také jít ven na ulici se projít anebo se kouknout do kuchyně..");
+        Prostor domov = new Prostor("domov","domov, ve kterém bydlí postava.\nV obývacím pokoji se nachází funkční pevná linka, přes kterou můžete zavolat svým rodičům a ve skříni máte lano.\nS lanem se můžete oběsit pomocí příkazu 'oběsit' a rodičům můžete zavolat příkazem 'zavolat'.\nMůžete také jít ven na ulici se projít anebo se kouknout do kuchyně..");
         Prostor kuchyn = new Prostor("kuchyň", "kuchyň, kde má postava prázdnou lednici a na kuchyňské lince nůž.\nTaké zde nacházíte poslední úspory");
 
         Prostor ulice = new Prostor("ulice","ulice bytu kde postava bydlí.\nMáte možnost jít zpět domů, ke kamarádovi domů, na hlavní nádraží, do školy anebo na Václavské náměstí..");

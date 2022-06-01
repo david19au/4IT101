@@ -38,7 +38,7 @@ class PrikazKonec implements IPrikaz {
         }
         else {
             hra.setKonecHry(true);
-            return "Hra byla ukončena příkazem konec.\nMožná mohlo skončit všechno jinak...";
+            return "Hra byla ukončena příkazem konec.";
         }
     }
 

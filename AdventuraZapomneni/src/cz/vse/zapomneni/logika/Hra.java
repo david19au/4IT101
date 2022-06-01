@@ -29,6 +29,7 @@ public class Hra implements IHra {
         platnePrikazy.vlozPrikaz(new PrikazNapoveda(platnePrikazy));
         platnePrikazy.vlozPrikaz(new PrikazJdi(herniPlan));
         platnePrikazy.vlozPrikaz(new PrikazZavolat(herniPlan));
+        platnePrikazy.vlozPrikaz(new PrikazObesit(herniPlan, this));
         platnePrikazy.vlozPrikaz(new PrikazSeber(herniPlan, inventar));
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
     }
@@ -54,7 +55,7 @@ public class Hra implements IHra {
      *  Vrátí závěrečnou zprávu pro hráče.
      */
     public String vratEpilog() {
-        return "Díky, že jste si zahráli. Mějte se pěkně a někdy zase v budoucnu.";
+        return "Možná mohlo skončit všechno jinak...\nDíky, že jste si zahráli. Mějte se pěkně a někdy zase v budoucnu.";
     }
     
     /** 
