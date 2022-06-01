@@ -46,7 +46,7 @@ public class HerniPlan {
 
         Prostor vaclavskeNamesti = new Prostor("václavské_náměstí","Václavské náměstí, kde se pohybuje tuna turistů.\nRozhoduje se, zda by procházka dále mohla pomoct se uklidnit, či jestli by nebylo rychlejší navštívit drogového dealera, který postavě umožní se na chvíli vypnout.");
         Prostor drogovyDealer = new Prostor("drogový_dealer","u drogového dealera, kde si postava může koupit dočasný ráj pro sebe.\nMůže si zde promluvit s dealerem, aby mu dal drogy.");
-        Prostor karluvMost = new Prostor("karlův_most","karlůva mostu s lidmi kolem.\nPostava si po procházce uvědomí, že je už relativně pozdě a neměl by proto už chodit někam dále.\nPostava si ale zároveň uvědomí, že na něj čeká hrozně moc věcí, které prostě nezvládne a v hlavě má jen dvě možnosti – všechno ukončit hned teď anebo se vrátit a doufat, že se naskytne jiná možnost, která bude „lepší“.\n Skočit můžete pomocí příkazu 'skok'.");
+        Prostor karluvMost = new Prostor("karlův_most","karlůva mostu s lidmi kolem.\nPostava si po procházce uvědomí, že je už relativně pozdě a neměl by proto už chodit někam dále.\nPostava si ale zároveň uvědomí, že na něj čeká hrozně moc věcí, které prostě nezvládne a v hlavě má jen dvě možnosti – všechno ukončit hned teď anebo se vrátit a doufat, že se naskytne jiná možnost, která bude „lepší“.\nSkočit můžete pomocí příkazu 'skočit'.");
         
         // přiřazují se průchody mezi prostory (sousedící prostory)
         domov.setVychod(kuchyn);

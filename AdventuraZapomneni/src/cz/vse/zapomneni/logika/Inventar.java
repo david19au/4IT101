@@ -6,7 +6,7 @@ import java.util.Map;
 public class Inventar {
 
     private Map<String, Vec> mapaSVecmi;
-    private static final int MAXIMALNI_KAPACITA = 3; //TODO vymyslet smysluplný limit
+    private static final int MAXIMALNI_KAPACITA = 2;
     private static int pocetVeci;
 
 
@@ -29,7 +29,17 @@ public class Inventar {
 }
 
     public void odebraniVeciZInv (Vec vec) {
+        pocetVeci--;
         mapaSVecmi.remove(vec.getNazev());
+    }
+
+    public boolean obsahujeVInventari(String jmenoVeci) {
+        for (Vec vec : mapaSVecmi.values()) {
+            if (vec.getNazev().equals(jmenoVeci)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
