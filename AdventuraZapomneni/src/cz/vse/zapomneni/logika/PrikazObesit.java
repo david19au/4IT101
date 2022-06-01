@@ -4,7 +4,6 @@ public class PrikazObesit implements IPrikaz{
     private static final String NAZEV = "oběsit";
     private HerniPlan herniPlan;
     private Hra hra;
-    private Vec vec;
 
     public PrikazObesit(HerniPlan herniPlan, Hra hra) {
         this.herniPlan = herniPlan;

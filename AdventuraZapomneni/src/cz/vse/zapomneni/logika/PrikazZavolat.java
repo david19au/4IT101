@@ -12,7 +12,7 @@ public class PrikazZavolat implements IPrikaz {
     @Override
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0 && (herniPlan.getAktualniProstor().getNazev() == "domov")) {
-            return "Zavolal jsem rodičům.";
+            return "Postava zavolala svým rodičům a nebyla to příjemná povídaná.\nRodiče nezajímaly problémy postavy a vinu shazovala na postavu, že si neumí správně zařídit čas.\nPostava se nyní cítí ještě více bezcenná, než předtím.";
         } else if (parametry.length == 1 && (herniPlan.getAktualniProstor().getNazev() == "domov")) {
             return "Prosím použijte příkaz bez parametrů, děkuji.";
         }
