@@ -1,7 +1,7 @@
 package cz.vse.zapomneni.logika;
 
 public class PrikazObesit implements IPrikaz{
-    private static final String NAZEV = "oběsit";
+    private static final String NAZEV = "obesit";
     private HerniPlan herniPlan;
     private Hra hra;
 
