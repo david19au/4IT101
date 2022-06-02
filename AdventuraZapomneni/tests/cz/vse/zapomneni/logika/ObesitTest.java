@@ -3,7 +3,7 @@ package cz.vse.zapomneni.logika;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ObesitTest {
 
@@ -19,10 +19,10 @@ public class ObesitTest {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("jdi kuchyn");
         hraTest.zpracujPrikaz("obesit");
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         hraTest.zpracujPrikaz("jdi domov");
         hraTest.zpracujPrikaz("obesit");
-        assertEquals(true, hraTest.konecHry());
+        assertTrue(hraTest.konecHry());
     }
 
 

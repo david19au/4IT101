@@ -3,7 +3,7 @@ package cz.vse.zapomneni.logika;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ZazvonitTest {
 
@@ -18,11 +18,11 @@ public class ZazvonitTest {
     public void testZazvoneni() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         assertEquals("Postava nemá kde zazvonit.", hraTest.zpracujPrikaz("zazvonit"));
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         hraTest.zpracujPrikaz("jdi ulice");
         hraTest.zpracujPrikaz("jdi kamaraduv_byt");
         hraTest.zpracujPrikaz("zazvonit");
-        assertEquals(true, hraTest.konecHry());
+        assertTrue(hraTest.konecHry());
 
     }
 }

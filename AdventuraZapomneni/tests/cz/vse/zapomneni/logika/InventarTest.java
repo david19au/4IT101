@@ -24,23 +24,23 @@ public class InventarTest {
     public void testInventar() {
         inventarTest.vlozeniVeciDoInv(vecTest1);
         assertEquals(1, inventarTest.getPocetVeci());
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec1"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec1"));
         inventarTest.vlozeniVeciDoInv(vecTest2);
         assertEquals(2, inventarTest.getPocetVeci());
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec1"));
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec2"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec1"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec2"));
         inventarTest.vlozeniVeciDoInv(vecTest3);
         assertEquals(2, inventarTest.getPocetVeci());
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec1"));
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec2"));
-        assertEquals(false, inventarTest.obsahujeVInventari("Vec3"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec1"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec2"));
+        assertFalse(inventarTest.obsahujeVInventari("Vec3"));
         inventarTest.odebraniVeciZInv(vecTest2);
         assertEquals(1, inventarTest.getPocetVeci());
         inventarTest.vlozeniVeciDoInv(vecTest3);
         assertEquals(2, inventarTest.getPocetVeci());
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec3"));
-        assertEquals(false, inventarTest.obsahujeVInventari("Vec2"));
-        assertEquals(true, inventarTest.obsahujeVInventari("Vec1"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec3"));
+        assertFalse(inventarTest.obsahujeVInventari("Vec2"));
+        assertTrue(inventarTest.obsahujeVInventari("Vec1"));
 
 
     }

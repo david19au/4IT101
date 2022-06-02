@@ -53,7 +53,7 @@ public class ProstorTest {
         prostor1.setVychod(prostor2);
         prostor2.setVychod(prostor1);
         assertEquals(prostor2, prostor1.vratSousedniProstor("bufet"));
-        assertEquals(null, prostor2.vratSousedniProstor("pokoj"));
+        assertNull(prostor2.vratSousedniProstor("pokoj"));
     }
 
 }

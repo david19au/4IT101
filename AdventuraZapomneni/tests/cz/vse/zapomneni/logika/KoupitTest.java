@@ -3,7 +3,7 @@ package cz.vse.zapomneni.logika;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class KoupitTest {
 
@@ -18,12 +18,12 @@ public class KoupitTest {
     public void testNepovedenyNakupDrog() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("jdi ulice");
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         hraTest.zpracujPrikaz("jdi vaclavske_namesti");
         hraTest.zpracujPrikaz("jdi drogovy_dealer");
         assertEquals("drogovy_dealer", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("koupit");
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         hraTest.zpracujPrikaz("jdi vaclavske_namesti");
         assertEquals("vaclavske_namesti", hraTest.getHerniPlan().getAktualniProstor().getNazev());
     }
@@ -39,7 +39,7 @@ public class KoupitTest {
         hraTest.zpracujPrikaz("jdi drogovy_dealer");
         assertEquals("drogovy_dealer", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("koupit");
-        assertEquals(true, hraTest.konecHry());
+        assertTrue(hraTest.konecHry());
     }
 
 }

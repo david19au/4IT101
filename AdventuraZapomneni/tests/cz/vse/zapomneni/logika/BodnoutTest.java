@@ -3,7 +3,7 @@ package cz.vse.zapomneni.logika;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class BodnoutTest {
 
@@ -18,12 +18,12 @@ public class BodnoutTest {
     public void testBodnuti() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("jdi kuchyn");
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         assertEquals("kuchyn", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("bodnout");
-        assertEquals(false, hraTest.konecHry());
+        assertFalse(hraTest.konecHry());
         hraTest.zpracujPrikaz("seber nuz");
         hraTest.zpracujPrikaz("bodnout");
-        assertEquals(true, hraTest.konecHry());
+        assertTrue(hraTest.konecHry());
     }
 }
