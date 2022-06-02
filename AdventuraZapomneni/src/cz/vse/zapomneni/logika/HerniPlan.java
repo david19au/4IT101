@@ -15,7 +15,7 @@ package cz.vse.zapomneni.logika;
 public class HerniPlan {
 
     private Prostor aktualniProstor;
-    private Prostor konecnyProstor;
+    private Prostor psychologProstor;
 
     /**
      * Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -40,11 +40,11 @@ public class HerniPlan {
         Prostor kamaraduvByt = new Prostor("kamaraduv_byt", "vchod do kamarádova bytu.\nNejste si jistí jestli Vás vůbec má kamarád rád a jestli Vás bere jako kamaráda. Můžete se ale pokusit se promluvit s kamarádem anebo jít zpět na ulici.\nNa jeho byt zazvoníte příkazem 'zazvonit'");
 
         Prostor hlavniNadrazi = new Prostor("hlavni_nadrazi", "Hlavní nádraží s vlaky a turisty.\nNemáte dostatek peněz a ani náladu někam odcestovat, avšak stále Vás mrzí, že ostatní si to mohou dovolit.\nMůžete jim ukázat, jaké to je, nemoct odcestovat ale..");
-        Prostor koleje = new Prostor("koleje", "koleje na hlavním nádraží.\nPodle tabulky příjezdů jste si našli, že nejbližší příjezd pokračujícího vlaku je na nástupišti 2.\nPřicházíte na koleje a těsně před příjezdem vlaku skáčete pod koleje, kde už není kudy úniku a ani záchrany - vlak totiž nedokáže tak rychle zabrzdit.\nKrev je všude po čelním skle vlaku a většina nádraží je paralyzována.\nVšude po zprávách se šíří zpráva o sebevraždě na hlavním nádraží a celá událost rozkmitá řadu smutečných reakcí od rodiny i od přátel, kterých měla postava více, jak si myslela.\nV tomto sezení pro Vás hra skončila. Ukončete hru použitím příkazu 'konec'");
+        Prostor koleje = new Prostor("koleje", "koleje na hlavním nádraží.\nPodle tabulky příjezdů jste si našli, že nejbližší příjezd pokračujícího vlaku je na nástupišti 2.\nJe to vlak mířící do Drážďan na Vánoční trhy.\nPostava se rozhoduje, zda neskončit své trápení rovnou tu a teď, zároveň také ukázat i cestujícím, jaké to je být na dně...\nSkočit můžete příkazem 'skocit'");
 
         Prostor skola = new Prostor("skola", "vysoká škola kam chodí postava.\nPostava ví, že škola nabízí zdarma psychologickou pomoc, která mu může pomoct s momentální situací.\nNa druhou stranu ale nikdy u takové pomoci nebyl a bojí se, že na tom bude ještě hůř jak dříve a lidi kolem se mu budou navíc ještě vysmívat, že se s tím nedokáže vypořádat sám.\nVí také ale, že vstup na střechu není monitorovaný a může z ní skočit..");
-        Prostor strechaSkoly = new Prostor("strecha_skoly", "střechy vysoké školy.\nPomalu se postava připlíží ke hraně střechy a kouká směrem dolů na ulici. Postavě se motá hlava, nedokáže udržet rovnováhu a padá střemhlav na zem.\nBezvládně dopadne na chodník a krvácí, kolemjdoucí se postavě snaží pomoct ale ani po příjezdu sanitky už nebylo jak pomoci...\nVšude po zprávách se šíří zpráva o sebevraždě vysokoškolského studenta a celá událost rozkmitá řadu smutečných reakcí od rodiny i od přátel, kterých měl víc, jak si myslel.\nV tomto sezení pro Vás hra skončila. Ukončete hru použitím příkazu 'konec'");
-        Prostor psycholog = new Prostor("psycholog", "čekárny u školního psychologa. Po nějaké chvilce si postavu vyzvedne a vyslechne psycholog, kde postava mu říká všechny svoje problémy.\nPsycholog postavu uklidní a navede ho aspoň částečně na jiné myšlenky jak chuť spáchat sebevraždu a pocit bezcennosti.\nDomluví se na pravidelných schůzkách, a že postava není jediná, kde se takhle pociťuje a není to nic špatného, se občas takhle cítit a mít potřebu si o tom promluvit s někým.\nPomůže postavě dále si napsat seznam věcí, které musí udělat, kde se ukázalo, že se to dá všechno zvládnout.\nTouto cestou se postavě nic nestane a vrátí se domů s klidnější hlavou.\nUkončete hru použitím příkazu 'konec'");
+        Prostor strechaSkoly = new Prostor("strecha_skoly", "střechy vysoké školy.\nPostava pomalu ale jista vyšlapala schody a přes střešní okno se dostala na střechu školy.\nPorozhlédne se kolem sebe a popřemýšlí, jestli by nakonec nechtělo radši slézt dolů, že by existovalo lepší řešení...\nMůžete skočit příkazem 'skocit'");
+        Prostor psycholog = new Prostor("psycholog", "čekárny u školního psychologa. \n");
 
         Prostor vaclavskeNamesti = new Prostor("vaclavske_namesti", "Václavské náměstí, kde se pohybuje tuna turistů.\nRozhoduje se, zda by procházka dále mohla pomoct se uklidnit, či jestli by nebylo rychlejší navštívit drogového dealera, který postavě umožní se na chvíli vypnout.");
         Prostor drogovyDealer = new Prostor("drogovy_dealer", "u drogového dealera, kde si postava může koupit dočasný ráj pro sebe.\nMůže si zde promluvit s dealerem, aby mu dal drogy. Drogy koupíte s příkazem 'koupit'");
@@ -61,6 +61,7 @@ public class HerniPlan {
         ulice.setVychod(skola);
         hlavniNadrazi.setVychod(koleje);
         hlavniNadrazi.setVychod(ulice);
+        koleje.setVychod(hlavniNadrazi);
         kamaraduvByt.setVychod(ulice);
         vaclavskeNamesti.setVychod(ulice);
         vaclavskeNamesti.setVychod(drogovyDealer);
@@ -68,12 +69,13 @@ public class HerniPlan {
         skola.setVychod(psycholog);
         skola.setVychod(strechaSkoly);
         skola.setVychod(ulice);
+        strechaSkoly.setVychod(skola);
         karluvMost.setVychod(vaclavskeNamesti);
         drogovyDealer.setVychod(vaclavskeNamesti);
 
-        // nastavuje se počáteční prostor
-        aktualniProstor = domov;
-        konecnyProstor = psycholog;
+
+        aktualniProstor = domov; // nastavuje se počáteční prostor
+        psychologProstor = psycholog; //u psychologa se může hra ukončit
 
         // vytvoření věcí a deklarování jména a zda jdou sebrat
         Vec nuz = new Vec("nuz", true);
@@ -109,7 +111,13 @@ public class HerniPlan {
         aktualniProstor = prostor;
     }
 
-    public boolean jeUPsychologa() { //TODO
-        return aktualniProstor.equals(konecnyProstor);
+    /**
+     * Metoda kontroluje jestli se postava dostala do prostoru 'psycholog'.
+     * V tomto případě se v class Hra v metodě zpracujPrikaz (input z terminálu) vypíše příslušný text a ukončí hra.
+     *
+     * @return true pokud je postava u psychologa
+     */
+    public boolean jeUPsychologa() {
+        return aktualniProstor.equals(psychologProstor);
     }
 }

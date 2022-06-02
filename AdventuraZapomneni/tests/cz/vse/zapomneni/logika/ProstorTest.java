@@ -15,32 +15,6 @@ import static org.junit.Assert.*;
  * @version pro skolní rok 2016/2017
  */
 public class ProstorTest {
-    //== Datové atributy (statické i instancí)======================================
-
-    //== Konstruktory a tovární metody =============================================
-    //-- Testovací třída vystačí s prázdným implicitním konstruktorem ----------
-
-    //== Příprava a úklid přípravku ================================================
-
-    /***************************************************************************
-     * Metoda se provede před spuštěním každé testovací metody. Používá se
-     * k vytvoření tzv. přípravku (fixture), což jsou datové atributy (objekty),
-     * s nimiž budou testovací metody pracovat.
-     */
-    @Before
-    public void setUp() {
-    }
-
-    /***************************************************************************
-     * Úklid po testu - tato metoda se spustí po vykonání každé testovací metody.
-     */
-    @After
-    public void tearDown() {
-    }
-
-    //== Soukromé metody používané v testovacích metodách ==========================
-
-    //== Vlastní testovací metody ==================================================
 
     /**
      * Testuje, zda jsou správně nastaveny průchody mezi prostory hry. Prostory

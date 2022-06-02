@@ -84,6 +84,12 @@ public class HraTest {
         hraTest.zpracujPrikaz("jdi hlavni_nadrazi");
         assertFalse(hraTest.konecHry());
         assertEquals("hlavni_nadrazi", hraTest.getHerniPlan().getAktualniProstor().getNazev());
+        hraTest.zpracujPrikaz("jdi koleje");
+        assertFalse(hraTest.konecHry());
+        assertEquals("koleje", hraTest.getHerniPlan().getAktualniProstor().getNazev());
+        hraTest.zpracujPrikaz("jdi hlavni_nadrazi");
+        assertFalse(hraTest.konecHry());
+        assertEquals("hlavni_nadrazi", hraTest.getHerniPlan().getAktualniProstor().getNazev());
         hraTest.zpracujPrikaz("jdi ulice");
         assertFalse(hraTest.konecHry());
         assertEquals("ulice", hraTest.getHerniPlan().getAktualniProstor().getNazev());
@@ -93,7 +99,10 @@ public class HraTest {
         hraTest.zpracujPrikaz("jdi strecha_skoly");
         assertFalse(hraTest.konecHry());
         assertEquals("strecha_skoly", hraTest.getHerniPlan().getAktualniProstor().getNazev());
-        hraTest.zpracujPrikaz("konec");
+        hraTest.zpracujPrikaz("jdi skola");
+        assertFalse(hraTest.konecHry());
+        assertEquals("skola", hraTest.getHerniPlan().getAktualniProstor().getNazev());
+        hraTest.zpracujPrikaz("jdi psycholog");
         assertTrue(hraTest.konecHry());
     }
 

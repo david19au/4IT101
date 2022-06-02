@@ -74,6 +74,8 @@ public class Hra implements IHra {
      * Pak otestuje zda příkaz je klíčovým slovem  např. jdi.
      * Pokud ano spustí samotné provádění příkazu.
      *
+     * Dále pokud je hodnota 'jeUPsychologa' true z HerniPlan, vypíše se zpráva a ukončí se hra.
+     *
      * @param radek text, který zadal uživatel jako příkaz do hry.
      * @return vrací se řetězec, který se má vypsat na obrazovku
      */
@@ -84,12 +86,12 @@ public class Hra implements IHra {
         for (int i = 0; i < parametry.length; i++) {
             parametry[i] = slova[i + 1];
         }
-        String textKVypsani = " .... "; //TODO
+        String textKVypsani = " .... ";
         if (platnePrikazy.jePlatnyPrikaz(slovoPrikazu)) {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.provedPrikaz(parametry);
             if (herniPlan.jeUPsychologa()) {
-                textKVypsani = "Jsi u psychologa,";
+                textKVypsani = "Po nějaké chvilce si postavu vyzvedne a vyslechne psycholog, kde postava mu říká všechny svoje problémy.\nPsycholog postavu uklidní a navede ho aspoň částečně na jiné myšlenky jak chuť spáchat sebevraždu a pocit bezcennosti.\nDomluví se na pravidelných schůzkách, a že postava není jediná, kde se takhle pociťuje a není to nic špatného, se občas takhle cítit a mít potřebu si o tom promluvit s někým.\nPomůže postavě dále si napsat seznam věcí, které musí udělat, kde se ukázalo, že se to dá všechno zvládnout.\nTouto cestou se postavě nic nestane a vrátí se domů s klidnější hlavou.";
                 konecHry = true;
             }
         } else {
