@@ -88,6 +88,10 @@ public class Hra implements IHra {
         if (platnePrikazy.jePlatnyPrikaz(slovoPrikazu)) {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.provedPrikaz(parametry);
+            if (herniPlan.jeUPsychologa()) {
+                textKVypsani = "Jsi u psychologa,";
+                konecHry = true;
+            }
         } else {
             textKVypsani = "Tento příkaz neznám. Zkontrolujte nápovědu, pokud si nevíte rady.";
         }

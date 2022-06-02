@@ -15,7 +15,6 @@ import static org.junit.Assert.*;
  */
 public class HraTest {
     private Hra hraTest;
-    private Inventar inventarTest;
 
     //== Datové atributy (statické i instancí)======================================
 
@@ -32,15 +31,8 @@ public class HraTest {
     @Before
     public void setUp() {
         hraTest = new Hra();
-        inventarTest = new Inventar();
     }
 
-    /***************************************************************************
-     * Úklid po testu - tato metoda se spustí po vykonání každé testovací metody.
-     */
-    @After
-    public void tearDown() {
-    }
 
     //== Soukromé metody používané v testovacích metodách ==========================
 

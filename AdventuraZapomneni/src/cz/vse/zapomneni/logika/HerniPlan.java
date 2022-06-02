@@ -15,6 +15,7 @@ package cz.vse.zapomneni.logika;
 public class HerniPlan {
 
     private Prostor aktualniProstor;
+    private Prostor konecnyProstor;
 
     /**
      * Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -72,6 +73,7 @@ public class HerniPlan {
 
         // nastavuje se počáteční prostor
         aktualniProstor = domov;
+        konecnyProstor = psycholog;
 
         // vytvoření věcí a deklarování jména a zda jdou sebrat
         Vec nuz = new Vec("nuz", true);
@@ -107,4 +109,7 @@ public class HerniPlan {
         aktualniProstor = prostor;
     }
 
+    public boolean jeUPsychologa() { //TODO
+        return aktualniProstor.equals(konecnyProstor);
+    }
 }
