@@ -1,6 +1,6 @@
 package cz.vse.zapomneni.logika;
 
-public class PrikazBodnout implements IPrikaz{
+public class PrikazBodnout implements IPrikaz {
 
     private static final String NAZEV = "bodnout";
     private HerniPlan herniPlan;
@@ -21,9 +21,6 @@ public class PrikazBodnout implements IPrikaz{
         } else if (parametry.length == 1 && inventar.obsahujeVInventari("nuz")) {
             return "Bodnout se dá mnoha způsoby, ale udělejme to jednoduše - použijte prosím jeden parametr.";
         }
-/*        if (parametry.length == 0 && !(inventar.obsahujeVInventari("penize"))) {
-            return "Postava nemá peníze, aby si mohla koupit drogy.";
-        }*/
         return "Postava se nemá čím nebo jak bodnout.";
     }
 

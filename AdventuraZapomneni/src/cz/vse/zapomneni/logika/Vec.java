@@ -5,12 +5,10 @@ import java.util.Objects;
 public class Vec {
     private final String nazev;
     private final boolean sebratelna;
-/*    private final boolean pouzitelna;*/
 
     public Vec(String nazev, boolean sebratelna) {
         this.nazev = nazev;
         this.sebratelna = sebratelna;
-/*        this.pouzitelna = pouzitelna;*/
     }
 
     public String getNazev() {
@@ -21,9 +19,6 @@ public class Vec {
         return sebratelna;
     }
 
-/*    public boolean isPouzitelna() {
-        return pouzitelna;
-    }*/
 
     @Override
     public boolean equals(Object o) {

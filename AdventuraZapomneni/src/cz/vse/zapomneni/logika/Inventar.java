@@ -17,6 +17,7 @@ public class Inventar {
     public int getPocetVeci() {
         return pocetVeci;
     }
+
     public boolean dostMista() {
         return MAXIMALNI_KAPACITA > pocetVeci;
     }
@@ -24,11 +25,11 @@ public class Inventar {
     public void vlozeniVeciDoInv(Vec vec) {
         if ((vec != null) && dostMista()) {
             pocetVeci++;
-            mapaSVecmi.put(vec.getNazev(),vec);
+            mapaSVecmi.put(vec.getNazev(), vec);
         }
-}
+    }
 
-    public void odebraniVeciZInv (Vec vec) {
+    public void odebraniVeciZInv(Vec vec) {
         pocetVeci--;
         mapaSVecmi.remove(vec.getNazev());
     }
