@@ -8,11 +8,11 @@ import cz.vse.zapomneni.logika.IHra;
 import cz.vse.zapomneni.uiText.TextoveRozhrani;
 
 /*******************************************************************************
- * Třída  Start je hlavní třídou projektu,
+ * Třída Main je hlavní třídou projektu,
  * který představuje jednoduchou textovou adventuru určenou k dalším úpravám a rozšiřování
  *
- * @author Jarmila Pavlíčková
- * @version ZS 2016/2017
+ * @author Jarmila Pavlíčková, Trong Dat Luu
+ * @version LS 2021/22
  */
 public class Main {
     /***************************************************************************

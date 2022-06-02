@@ -4,8 +4,8 @@ package cz.vse.zapomneni.logika;
  * Třída PrikazKonec implementuje pro hru příkaz konec.
  * Tato třída je součástí jednoduché textové hry.
  *
- * @author Jarmila Pavlickova
- * @version pro školní rok 2016/2017
+ * @author Jarmila Pavlickova, Trong Dat Luu
+ * @version LS 2021/22
  */
 
 class PrikazKonec implements IPrikaz {
@@ -33,7 +33,7 @@ class PrikazKonec implements IPrikaz {
     @Override
     public String provedPrikaz(String... parametry) {
         if (parametry.length > 0) {
-            return "Ukončit co? Nechápu, proč jste zadal druhé slovo.";
+            return "Co se má ukončit? Nechápu, proč jste zadal druhé slovo.";
         } else {
             hra.setKonecHry(true);
             return "Hra byla ukončena příkazem konec.";
@@ -43,7 +43,7 @@ class PrikazKonec implements IPrikaz {
     /**
      * Metoda vrací název příkazu (slovo které používá hráč pro jeho vyvolání)
      *
-     * @ return nazev prikazu
+     * @return název příkazu
      */
     @Override
     public String getNazev() {

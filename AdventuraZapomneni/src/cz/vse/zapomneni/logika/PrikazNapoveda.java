@@ -4,8 +4,8 @@ package cz.vse.zapomneni.logika;
  * Třída PrikazNapoveda implementuje pro hru příkaz napoveda.
  * Tato třída je součástí jednoduché textové hry.
  *
- * @author Jarmila Pavlickova, Luboš Pavlíček
- * @version pro školní rok 2016/2017
+ * @author Jarmila Pavlickova, Luboš Pavlíček, Trong Dat Luu
+ * @version LS 2021/22
  */
 class PrikazNapoveda implements IPrikaz {
 

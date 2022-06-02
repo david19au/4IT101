@@ -8,8 +8,8 @@ package cz.vse.zapomneni.logika;
  * Vypisuje uvítací a ukončovací text hry.
  * Také vyhodnocuje jednotlivé příkazy zadané uživatelem.
  *
- * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- * @version pro školní rok 2016/2017
+ * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Trong Dat Luu
+ * @version LS 2021/22
  */
 
 public class Hra implements IHra {
@@ -32,7 +32,7 @@ public class Hra implements IHra {
         platnePrikazy.vlozPrikaz(new PrikazSkocit(herniPlan, this));
         platnePrikazy.vlozPrikaz(new PrikazObesit(herniPlan, this));
         platnePrikazy.vlozPrikaz(new PrikazZazvonit(herniPlan, this));
-        platnePrikazy.vlozPrikaz(new PrikazBodnout(herniPlan, inventar, this));
+        platnePrikazy.vlozPrikaz(new PrikazBodnout(inventar, this));
         platnePrikazy.vlozPrikaz(new PrikazSeber(herniPlan, inventar));
         platnePrikazy.vlozPrikaz(new PrikazKoupit(herniPlan, inventar, this));
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
@@ -89,7 +89,7 @@ public class Hra implements IHra {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.provedPrikaz(parametry);
         } else {
-            textKVypsani = "Nevím co tím myslíš? Tento příkaz neznám. ";
+            textKVypsani = "Tento příkaz neznám. Zkontrolujte nápovědu, pokud si nevíte rady.";
         }
         return textKVypsani;
     }

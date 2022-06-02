@@ -9,8 +9,8 @@ package cz.vse.zapomneni.logika;
  * propojuje je vzájemně pomocí východů
  * a pamatuje si aktuální prostor, ve kterém se hráč právě nachází.
  *
- * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- * @version pro školní rok 2016/2017
+ * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Trong Dat Luu
+ * @version LS 2021/22
  */
 public class HerniPlan {
 
@@ -18,7 +18,7 @@ public class HerniPlan {
 
     /**
      * Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
-     * Jako výchozí aktuální prostor nastaví halu.
+     * Jako výchozí aktuální prostor nastaví domov.
      */
     public HerniPlan() {
         zalozProstoryHry();
@@ -27,7 +27,7 @@ public class HerniPlan {
 
     /**
      * Vytváří jednotlivé prostory a propojuje je pomocí východů.
-     * Jako výchozí aktuální prostor nastaví domeček.
+     * Jako výchozí aktuální prostor nastaví domov.
      */
     private void zalozProstoryHry() {
         // vytvářejí se jednotlivé prostory
@@ -70,14 +70,17 @@ public class HerniPlan {
         karluvMost.setVychod(vaclavskeNamesti);
         drogovyDealer.setVychod(vaclavskeNamesti);
 
-        aktualniProstor = domov;  // hra začíná v domě postavy
+        // nastavuje se počáteční prostor
+        aktualniProstor = domov;
 
+        // vytvoření věcí a deklarování jména a zda jdou sebrat
         Vec nuz = new Vec("nuz", true);
         Vec penize = new Vec("penize", true);
         Vec pevnaLinka = new Vec("pevna_linka", false);
         Vec lano = new Vec("lano", false);
         Vec zvonek = new Vec("zvonek", false);
 
+        //přiřazení věcí do prostorů
         kuchyn.pridejVec(nuz);
         kuchyn.pridejVec(penize);
         domov.pridejVec(pevnaLinka);

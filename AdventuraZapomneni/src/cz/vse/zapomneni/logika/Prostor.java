@@ -16,15 +16,15 @@ import java.util.stream.Collectors;
  * Prostor může mít sousední prostory připojené přes východy. Pro každý východ
  * si prostor ukládá odkaz na sousedící prostor.
  *
- * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- * @version pro školní rok 2016/2017
+ * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Trong Dat Luu
+ * @version LS 2021/22
  */
 public class Prostor {
 
     private String nazev;
     private String popis;
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
-    private Set<Vec> veci;
+    private Set<Vec> veci; // obsahuje věci v prostoru
 
     /**
      * Vytvoření prostoru se zadaným popisem, např. "kuchyň", "hala", "trávník
@@ -111,9 +111,9 @@ public class Prostor {
     }
 
     /**
-     * Vrací "dlouhý" popis prostoru, který může vypadat následovně: Jsi v
-     * mistnosti/prostoru vstupni hala budovy VSE na Jiznim meste. vychody:
-     * chodba bufet ucebna
+     * Vrací "dlouhý" popis prostoru, který může vypadat následovně:
+     * "Jsi v mistnosti/prostoru vstupni hala budovy VSE na Jiznim meste.
+     * Východy: || ulice || kuchyn"
      *
      * @return Dlouhý popis prostoru
      */
@@ -125,7 +125,7 @@ public class Prostor {
 
     /**
      * Vrací textový řetězec, který popisuje sousední východy, například:
-     * "vychody: hala ".
+     * "Východy: || ulice || kuchyn".
      *
      * @return Popis východů - názvů sousedních prostorů
      */
@@ -137,6 +137,12 @@ public class Prostor {
         return vracenyText;
     }
 
+    /**
+     * Vrací textový řetězec, který popisuje věci v daném prostoru, například:
+     * "Věci: || lano || pevna_linka".
+     *
+     * @return Výpis věcí v prostoru
+     */
     public String popisVeci() {
         String vracenyText = "Věci:";
         for (Vec vec : veci) {
@@ -179,10 +185,21 @@ public class Prostor {
         return Collections.unmodifiableCollection(vychody);
     }
 
+    /**
+     * Přidává věc do daného prostoru.
+     *
+     * @param vec věc co se má vložit
+     */
     public void pridejVec(Vec vec) {
         veci.add(vec);
     }
 
+    /**
+     * Odebírá věc z daného prostoru.
+     *
+     * @param nazev název věci co se má odebrat
+     * @return vrací odebranou věc anebo hodnotu null
+     */
     public Vec odeberVec(String nazev) {
         for (Vec vec : veci) {
             if (vec.getNazev().equals(nazev)) {
@@ -190,7 +207,6 @@ public class Prostor {
                 return vec;
             }
         }
-
         return null;
     }
 }

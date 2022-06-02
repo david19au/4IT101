@@ -4,8 +4,8 @@ package cz.vse.zapomneni.logika;
  * Třída PrikazJdi implementuje pro hru příkaz jdi.
  * Tato třída je součástí jednoduché textové hry.
  *
- * @author Jarmila Pavlickova, Luboš Pavlíček
- * @version pro školní rok 2016/2017
+ * @author Jarmila Pavlickova, Luboš Pavlíček, Trong Dat Luu
+ * @version LS 2021/22
  */
 class PrikazJdi implements IPrikaz {
     private static final String NAZEV = "jdi";
@@ -33,7 +33,7 @@ class PrikazJdi implements IPrikaz {
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0) {
             // pokud chybí druhé slovo (sousední prostor), tak ....
-            return "Kam mám jít? Musíš zadat jméno východu";
+            return "Kam mám jít? Zadejte jméno prostoru.";
         }
 
         String smer = parametry[0];

@@ -1,5 +1,11 @@
 package cz.vse.zapomneni.logika;
-
+/**
+ * Class PrikazSkocit implementuje do hry příkaz 'skocit'.
+ * Postava se pomocí tohoto příkazu může zabít skokem z Karlova mostu.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
 public class PrikazSkocit implements IPrikaz {
 
     private static final String NAZEV = "skocit";
@@ -7,12 +13,26 @@ public class PrikazSkocit implements IPrikaz {
     private HerniPlan herniPlan;
     private Hra hra;
 
+    /**
+     * Konstruktor pro příkaz 'skocit'.
+     *
+     * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
+     * @param hra instance aktuální hry
+     */
     public PrikazSkocit(HerniPlan herniPlan, Hra hra) {
         this.herniPlan = herniPlan;
         this.hra = hra;
     }
 
-
+    /**
+     * Metoda provádí příkaz 'skocit'.
+     * Ujistí se, pokud se postava nachází v prostoru 'karluv_most' a že nebyl zadán žádný extra parametr.
+     * Pokud ano, postava skočí z mostu, zabije se a ukončí hru.
+     * Pokud ne, napíše zprávu, že postava nemá odkud skočit.
+     *
+     * @param parametry kontroluje zda nebyl zadán extra parametr
+     * @return vrací výsledek příkazu
+     */
     @Override
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0 && (herniPlan.getAktualniProstor().getNazev().equals("karluv_most"))) {
@@ -23,7 +43,11 @@ public class PrikazSkocit implements IPrikaz {
         }
         return "Nemám kde skočit odsud.";
     }
-
+    /**
+     * Metoda vrací název příkazu.
+     *
+     * @return vrátí název příkazu.
+     */
     @Override
     public String getNazev() {
         return NAZEV;
