@@ -1,4 +1,5 @@
 package cz.vse.zapomneni.logika;
+
 /**
  * Class PrikazSkocit implementuje do hry příkaz 'skocit'.
  * Postava se pomocí tohoto příkazu může zabít skokem z Karlova mostu.
@@ -17,7 +18,7 @@ public class PrikazSkocit implements IPrikaz {
      * Konstruktor pro příkaz 'skocit'.
      *
      * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
-     * @param hra instance aktuální hry
+     * @param hra       instance aktuální hry
      */
     public PrikazSkocit(HerniPlan herniPlan, Hra hra) {
         this.herniPlan = herniPlan;
@@ -46,10 +47,11 @@ public class PrikazSkocit implements IPrikaz {
         } else if (herniPlan.getAktualniProstor().getNazev().equals("koleje")) {
             hra.setKonecHry(true);
             return "Přicházíte na koleje a těsně před příjezdem vlaku skáčete pod koleje, kde už není kudy úniku a ani záchrany - vlak totiž nedokáže tak rychle zabrzdit.\nKrev je všude po čelním skle vlaku a většina nádraží je paralyzována.\nVšude po zprávách se šíří zpráva o sebevraždě na hlavním nádraží a celá událost rozkmitá řadu smutečných reakcí od rodiny i od přátel, kterých měla postava více, jak si myslela.";
-        } else{
-        return "Nemám kde skočit odsud.";
+        } else {
+            return "Nemám kde skočit odsud.";
         }
     }
+
     /**
      * Metoda vrací název příkazu.
      *

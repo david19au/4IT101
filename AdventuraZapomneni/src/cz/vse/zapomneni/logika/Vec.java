@@ -16,7 +16,7 @@ public class Vec {
     /**
      * Konstruktor pro věci - vytváří věci.
      *
-     * @param nazev název věci
+     * @param nazev      název věci
      * @param sebratelna jestli se dá věc dát do inventáře či ne
      */
     public Vec(String nazev, boolean sebratelna) {
@@ -45,6 +45,7 @@ public class Vec {
     /**
      * Metoda equals, která porovnává 2 věci, zda nemají stejný název.
      * Je překrytá pomocí @Override.
+     *
      * @param o porovnávaný objekt
      * @return pokud jsou věci stejné, hodnota je true
      */

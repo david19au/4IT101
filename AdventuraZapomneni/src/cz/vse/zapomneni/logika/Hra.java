@@ -73,7 +73,7 @@ public class Hra implements IHra {
      * Metoda zpracuje řetězec uvedený jako parametr, rozdělí ho na slovo příkazu a další parametry.
      * Pak otestuje zda příkaz je klíčovým slovem  např. jdi.
      * Pokud ano spustí samotné provádění příkazu.
-     *
+     * <p>
      * Dále pokud je hodnota 'jeUPsychologa' true z HerniPlan, vypíše se zpráva a ukončí se hra.
      *
      * @param radek text, který zadal uživatel jako příkaz do hry.

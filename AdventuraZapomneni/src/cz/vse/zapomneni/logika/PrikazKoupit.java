@@ -1,4 +1,5 @@
 package cz.vse.zapomneni.logika;
+
 /**
  * Class PrikazKoupit implementuje příkaz 'koupit'.
  * Pomocí tohoto příkazu si postava může koupit a zároveň použít drogy. Koupenýma drogama se ale předávkuje a umírá.
@@ -17,8 +18,8 @@ public class PrikazKoupit implements IPrikaz {
      * Konstruktor pro příkaz 'koupit'.
      *
      * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
-     * @param inventar inventář postavy/hráče
-     * @param hra instance aktuální hry
+     * @param inventar  inventář postavy/hráče
+     * @param hra       instance aktuální hry
      */
     public PrikazKoupit(HerniPlan herniPlan, Inventar inventar, Hra hra) {
         this.herniPlan = herniPlan;
@@ -30,6 +31,7 @@ public class PrikazKoupit implements IPrikaz {
      * Tato metoda provádí příkaz 'koupit'.
      * Kontroluje, zda není napsaný žádný další argument a zda je postava u drogového dealera. Zároveň kontroluje inventář,
      * zda postava má peníze u sebe.
+     *
      * @param parametry kontroluje zda hráč nenapsal žádný extra parametr.
      * @return vrací text při dané situaci.
      */
@@ -43,8 +45,8 @@ public class PrikazKoupit implements IPrikaz {
         }
         if (parametry.length == 0 && (herniPlan.getAktualniProstor().getNazev().equals("drogovy_dealer")) && !(inventar.obsahujeVInventari("penize"))) {
             return "Postava nemá peníze, aby si mohla koupit drogy.";
-        } else{
-        return "Postava není u drogového dealera.";
+        } else {
+            return "Postava není u drogového dealera.";
         }
     }
 

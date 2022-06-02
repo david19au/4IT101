@@ -1,4 +1,5 @@
 package cz.vse.zapomneni.logika;
+
 /**
  * Class PrikazZazvonit implementuje do hry příkaz 'zazvonit'.
  * Postava pomocí tohoto příkazu zazvoní postava u kamaráda, který mu pomůže se dostat přes sebevražedné pocity.
@@ -16,7 +17,7 @@ public class PrikazZazvonit implements IPrikaz {
      * Konstruktor pro příkaz 'zazvonit'.
      *
      * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
-     * @param hra instance aktuální hry
+     * @param hra       instance aktuální hry
      */
     public PrikazZazvonit(HerniPlan herniPlan, Hra hra) {
         this.herniPlan = herniPlan;
@@ -39,7 +40,7 @@ public class PrikazZazvonit implements IPrikaz {
         } else if (parametry.length >= 1 && (herniPlan.getAktualniProstor().getNazev().equals("kamaraduv_byt"))) {
             return "Prosím použijte příkaz bez parametrů, děkuji.";
         } else {
-        return "Postava nemá kde zazvonit.";
+            return "Postava nemá kde zazvonit.";
         }
     }
 

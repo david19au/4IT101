@@ -19,7 +19,7 @@ public class PrikazSeber implements IPrikaz {
      * Konstruktor pro příkaz 'seber'.
      *
      * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
-     * @param inventar inventář postavy/hráče
+     * @param inventar  inventář postavy/hráče
      */
     public PrikazSeber(HerniPlan herniPlan, Inventar inventar) {
         this.herniPlan = herniPlan;
@@ -59,6 +59,7 @@ public class PrikazSeber implements IPrikaz {
             return "Sebral jsi " + jmenoVeciCoSeMaSebrat + ".";
         }
     }
+
     /**
      * Metoda vrací název příkazu.
      *

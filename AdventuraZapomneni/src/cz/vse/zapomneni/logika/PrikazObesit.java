@@ -1,4 +1,5 @@
 package cz.vse.zapomneni.logika;
+
 /**
  * Class PrikazObesit implementuje příkaz 'obesit'.
  * Pomocí tohoto příkazu se postava může v prostoru 'domov' oběsit a zabít.
@@ -15,7 +16,7 @@ public class PrikazObesit implements IPrikaz {
      * Konstruktor pro příkaz 'obesit'.
      *
      * @param herniPlan herní plán kde se postava nachází a může se v ní pohybovat
-     * @param hra instance aktuální hry
+     * @param hra       instance aktuální hry
      */
     public PrikazObesit(HerniPlan herniPlan, Hra hra) {
         this.herniPlan = herniPlan;
@@ -27,6 +28,7 @@ public class PrikazObesit implements IPrikaz {
      * Ujistí se, pokud se postava nachází v prostoru 'domov' a že nebyl zadán žádný extra parametr.
      * Pokud ano, postavu zabije a ukončí hru.
      * Pokud ne, napíše zprávu, že se nemá postava jak oběsit.
+     *
      * @param parametry kontroluje zda nebyl zadán extra parametr
      * @return vrací výsledek příkazu
      */
@@ -38,9 +40,10 @@ public class PrikazObesit implements IPrikaz {
         } else if (parametry.length >= 1 && (herniPlan.getAktualniProstor().getNazev().equals("domov"))) {
             return "Prosím použijte příkaz bez parametrů, děkuji.";
         } else {
-        return "Nemám se tu jak oběsit.";
+            return "Nemám se tu jak oběsit.";
         }
     }
+
     /**
      * Metoda vrací název příkazu.
      *
