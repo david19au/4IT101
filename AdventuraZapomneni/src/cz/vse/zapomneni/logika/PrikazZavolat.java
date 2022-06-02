@@ -34,7 +34,7 @@ public class PrikazZavolat implements IPrikaz {
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0 && (herniPlan.getAktualniProstor().getNazev().equals("domov"))) {
             return "Postava zavolala svým rodičům a nebyla to příjemná povídaná.\nRodiče nezajímaly problémy postavy a vinu shazovaly na postavu, že si neumí správně zařídit čas.\nPostava se nyní cítí ještě více bezcenná, než předtím.";
-        } else if (parametry.length > 1 && (herniPlan.getAktualniProstor().getNazev().equals("domov"))) {
+        } else if (parametry.length >= 1 && (herniPlan.getAktualniProstor().getNazev().equals("domov"))) {
             return "Prosím použijte příkaz bez parametrů, děkuji.";
         }
         return "Nemohu zde volat.";
