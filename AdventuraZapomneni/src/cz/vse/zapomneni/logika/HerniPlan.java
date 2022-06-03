@@ -46,9 +46,9 @@ public class HerniPlan {
         Prostor strechaSkoly = new Prostor("strecha_skoly", "střechy vysoké školy.\nPostava pomalu ale jista vyšlapala schody a přes střešní okno se dostala na střechu školy.\nPorozhlédne se kolem sebe a popřemýšlí, jestli by nakonec nechtělo radši slézt dolů, že by existovalo lepší řešení...\nMůžete skočit příkazem 'skocit'");
         Prostor psycholog = new Prostor("psycholog", "čekárny u školního psychologa. \n");
 
-        Prostor vaclavskeNamesti = new Prostor("vaclavske_namesti", "Václavské náměstí, kde se pohybuje tuna turistů.\nRozhoduje se, zda by procházka dále mohla pomoct se uklidnit, či jestli by nebylo rychlejší navštívit drogového dealera, který postavě umožní se na chvíli vypnout.");
+        Prostor vaclavskeNamesti = new Prostor("vaclavske_namesti", "Václavské náměstí, kde se pohybuje tuna turistů.\nRozhoduje se, zda by procházka dále mohla pomoct se uklidnit, či jestli by nebylo rychlejší navštívit drogového dealera, který postavě umožní se na chvíli vypnout");
         Prostor drogovyDealer = new Prostor("drogovy_dealer", "u drogového dealera, kde si postava může koupit dočasný ráj pro sebe.\nMůže si zde promluvit s dealerem, aby mu dal drogy. Drogy koupíte s příkazem 'koupit'");
-        Prostor karluvMost = new Prostor("karluv_most", "karlůva mostu s lidmi kolem.\nPostava si po procházce uvědomí, že je už relativně pozdě a neměl by proto už chodit někam dále.\nPostava si ale zároveň uvědomí, že na něj čeká hrozně moc věcí, které prostě nezvládne a v hlavě má jen dvě možnosti – všechno ukončit hned teď anebo se vrátit a doufat, že se naskytne jiná možnost, která bude „lepší“.\nSkočit můžete pomocí příkazu 'skocit'.");
+        Prostor karluvMost = new Prostor("karluv_most", "karlůva mostu s lidmi kolem.\nPostava si po procházce uvědomí, že je už relativně pozdě a neměl by proto už chodit někam dále.\nPostava si ale zároveň uvědomí, že na něj čeká hrozně moc věcí, které prostě nezvládne a v hlavě má jen dvě možnosti – všechno ukončit hned teď anebo se vrátit a doufat, že se naskytne jiná možnost, která bude „lepší“.\nSkočit můžete pomocí příkazu 'skocit'");
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
         domov.setVychod(kuchyn);

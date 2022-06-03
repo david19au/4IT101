@@ -18,7 +18,7 @@ public class ProstorTest {
 
     /**
      * Testuje, zda jsou správně nastaveny průchody mezi prostory hry. Prostory
-     * nemusí odpovídat vlastní hře,
+     * nemusí odpovídat vlastní hře.
      */
     @Test
     public void testLzeProjit() {

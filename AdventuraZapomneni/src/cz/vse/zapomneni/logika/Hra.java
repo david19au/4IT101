@@ -50,7 +50,7 @@ public class Hra implements IHra {
                 "Situaci přestáváte zvládat a nevíte co dál.  \n" +
                 "V hlavě máte zafixováno, že si stejně ani nikdo nevšimne, pokud byste „zmizeli“...  \n" +
                 "\n" +
-                "Napište 'napoveda', pokud si nevíte rady, jak hrát dál.\n" +
+                "Napište 'napoveda', pokud si nevíte rady, jak hrát dál.\n\n--------------------------------------------\nTato hra obsahuje sebevražedné motivy. Pokud máte psychické problémy, nebo znáte někoho, kdo se potýká s obtížemi, existuje pomoc.\nLinka bezpečí: 116 111\nPražská linka důvěry: 222 580 697\n--------------------------------------------" +
                 "\n" +
                 herniPlan.getAktualniProstor().dlouhyPopis();
     }

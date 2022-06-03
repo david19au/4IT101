@@ -5,6 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Tato třída InventarTest testuje funkčnost inventáře pro postavu.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
 public class InventarTest {
 
     private Inventar inventarTest;
@@ -20,6 +26,12 @@ public class InventarTest {
         vecTest3 = new Vec("Vec3", true);
     }
 
+    /**
+     * Metoda testInventar kontroluje vložení 'Vec1' do inventáře a jestli metoda 'obsahujeVInventari' najde danou věc v
+     * inventáři. To samé se udělá s přidáním druhé věci.
+     * Přidání třeti věci se nepodaří a v inventáři jsou stále jenom 2 věci a 'Vec3' není přítomna v inventáři.
+     * Když se ale odebere 'Vec2', udělá se místo pro 'Vec3' a věc půjde přidat.
+     */
     @Test
     public void testInventar() {
         inventarTest.vlozeniVeciDoInv(vecTest1);

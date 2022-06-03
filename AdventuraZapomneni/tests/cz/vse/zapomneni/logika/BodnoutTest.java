@@ -5,6 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Tato třída BodnoutTest testuje příkaz 'bodnout' ze hry.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
+
 public class BodnoutTest {
 
     private Hra hraTest;
@@ -14,6 +21,9 @@ public class BodnoutTest {
         hraTest = new Hra();
     }
 
+    /**
+     * Test kontroluje, zda se hra neukončí jen tak bezdůvodně a také to, že se postava nemůže bodnout bez sebrání nože.
+     */
     @Test
     public void testBodnuti() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());

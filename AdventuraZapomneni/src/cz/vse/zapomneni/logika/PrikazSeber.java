@@ -50,13 +50,13 @@ public class PrikazSeber implements IPrikaz {
         }
         if (!(vecCoSeMaSebrat.isSebratelna())) {
             herniPlan.getAktualniProstor().pridejVec(vecCoSeMaSebrat);
-            return "Tuhle věc nemůžeš sebrat.";
+            return "Tuhle věc nemůžu sebrat.";
         } else if (vecCoSeMaSebrat.isSebratelna() && !(inventar.dostMista())) {
             herniPlan.getAktualniProstor().pridejVec(vecCoSeMaSebrat);
-            return "Tohle už neponeseš, nemáš místo kam věc dát.";
+            return "Tohle už neponesu, nemám místo kam věc dát.";
         } else {
             inventar.vlozeniVeciDoInv(vecCoSeMaSebrat);
-            return "Sebral jsi " + jmenoVeciCoSeMaSebrat + ".";
+            return "Sebral jsem " + jmenoVeciCoSeMaSebrat + ".";
         }
     }
 

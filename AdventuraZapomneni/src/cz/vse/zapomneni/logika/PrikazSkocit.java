@@ -27,7 +27,7 @@ public class PrikazSkocit implements IPrikaz {
 
     /**
      * Metoda provádí příkaz 'skocit'.
-     * Ujistí se, pokud se postava nachází v prostech kde se dá skočit a že nebyl zadán žádný extra parametr.
+     * Ujistí se, zda se postava nachází v prostech kde se dá skočit a zároveň nebyl zadán žádný extra parametr.
      * Pokud ano, postava skočí z daného místa, zabije se a ukončí hru.
      * Pokud ne, napíše zprávu, že postava nemá odkud skočit.
      *

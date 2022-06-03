@@ -5,6 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Třída ObesitTest testuje funkčnost příkazu 'obesit'.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
 public class ObesitTest {
 
     private Hra hraTest;
@@ -14,6 +20,10 @@ public class ObesitTest {
         hraTest = new Hra();
     }
 
+    /**
+     * Metoda 'testObeseni' kontroluje, že se postava nemůže oběsit nikde jinde než v prostoru 'domov'.
+     * Pokud je v prostoru 'domov', může se oběsit a příkaz ukončí hru s daným endingem.
+     */
     @Test
     public void testObeseni() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());

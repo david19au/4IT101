@@ -5,6 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Třída SkocitTest testuje funkčnost příkazu 'skocit'.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
 public class SkocitTest {
 
     private Hra hraTest;
@@ -14,6 +20,11 @@ public class SkocitTest {
         hraTest = new Hra();
     }
 
+    /**
+     * Metoda 'testSkocitKarluvMost' kontroluje, že příkaz funguje pokud chce postava skočit z Karlova mostu.
+     * Skok z míst, kde to není dovolené se nepodaří (zde prostor 'domov' nebo 'vaclavske_namesti').
+     * Dále kontroluje, že hra se správně ukončí při povedeném skoku.
+     */
     @Test
     public void testSkocitKarluvMost() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
@@ -28,6 +39,11 @@ public class SkocitTest {
         assertTrue(hraTest.konecHry());
     }
 
+    /**
+     * Metoda 'testSkocitStrecha' kontroluje, že příkaz funguje pokud chce postava skočit ze střechy ve škole.
+     * Skok z míst, kde to není dovolené se nepodaří (zde prostor 'domov').
+     * Dále kontroluje, že hra se správně ukončí při povedeném skoku.
+     */
     @Test
     public void testSkocitStrecha() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
@@ -42,6 +58,11 @@ public class SkocitTest {
         assertTrue(hraTest.konecHry());
     }
 
+    /**
+     * Metoda 'testSkocitKoleje' kontroluje, že příkaz funguje pokud chce postava skočit do kolejí na Hlavním nádraží.
+     * Skok z míst, kde to není dovolené se nepodaří (zde prostor 'domov' anebo 'hlavni_nadrazi').
+     * Dále kontroluje, že hra se správně ukončí při povedeném skoku.
+     */
     @Test
     public void testSkocitKoleje() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());

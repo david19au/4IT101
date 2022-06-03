@@ -5,6 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Třída ZavolatTest testuje funkčnost příkazu 'zavolat'.
+ *
+ * @author Trong Dat Luu
+ * @version LS 2021/22
+ */
 public class ZavolatTest {
 
     private Hra hraTest;
@@ -14,6 +20,10 @@ public class ZavolatTest {
         hraTest = new Hra();
     }
 
+    /**
+     * Metoda 'testZavolatRodicum' kontroluje, že se příkaz neprovede, pokud není postava není v prostoru 'domov'.
+     * Pokud postava je, příkaz vypíše daný text.
+     */
     @Test
     public void testZavolatRodicum() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
