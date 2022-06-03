@@ -7,6 +7,8 @@ import cz.vse.zapomneni.logika.Hra;
 import cz.vse.zapomneni.logika.IHra;
 import cz.vse.zapomneni.uiText.TextoveRozhrani;
 
+import java.io.IOException;
+
 /*******************************************************************************
  * Třída Main je hlavní třídou projektu,
  * který představuje jednoduchou textovou adventuru určenou k dalším úpravám a rozšiřování
@@ -20,7 +22,7 @@ public class Main {
      *
      * @param args Parametry příkazového řádku
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         IHra hra = new Hra();
         TextoveRozhrani ui = new TextoveRozhrani(hra);

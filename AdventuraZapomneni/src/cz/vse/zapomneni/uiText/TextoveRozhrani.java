@@ -1,6 +1,7 @@
 package cz.vse.zapomneni.uiText;
 
 
+import java.io.*;
 import java.util.Scanner;
 
 import cz.vse.zapomneni.logika.IHra;
@@ -29,9 +30,13 @@ public class TextoveRozhrani {
     /**
      * Hlavní metoda hry. Vypíše úvodní text a pak opakuje čtení a zpracování
      * příkazu od hráče do konce hry (dokud metoda konecHry() z logiky nevrátí
-     * hodnotu true). Nakonec vypíše text epilogu.
+     * hodnotu true).
+     *
+     * Nakonec vypíše text epilogu, přičemž hra se poté ukončí stisknutím libovolného tlačítka díky 'BufferedReader' a
+     * 'in.readLine()', který čeká na stisk tlačítka.
+     *
      */
-    public void hraj() {
+    public void hraj() throws IOException {
         System.out.println(hra.vratUvitani());
 
         // základní cyklus programu - opakovaně se čtou příkazy a poté
@@ -43,6 +48,8 @@ public class TextoveRozhrani {
         }
 
         System.out.println(hra.vratEpilog());
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in)); //BufferedReader
+        in.readLine(); //vyžaduje input, který může být libovolný
     }
 
     /**
