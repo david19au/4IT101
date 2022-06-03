@@ -40,16 +40,17 @@ public class HraTest {
     /***************************************************************************
      * Testuje průběh hry, po zavolání každého příkazu testuje, zda hra končí
      * a v jaké aktuální místnosti se hráč nachází.
-     * Při dalším rozšiřování hry doporučujeme testovat i jaké věci nebo osoby
-     * jsou v místnosti a jaké věci jsou v batohu hráče.
+     * Probíhá zde také jednoduchá kontrola, že se nesebratelná věc nesebere a sebratelná věc sebere.
      *
      */
     @Test
     public void testProchazeniProstoru() {
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
+        assertEquals("Tuhle věc nemůžu sebrat.", hraTest.zpracujPrikaz("seber pevna_linka"));
         hraTest.zpracujPrikaz("jdi kuchyn");
         assertFalse(hraTest.konecHry());
         assertEquals("kuchyn", hraTest.getHerniPlan().getAktualniProstor().getNazev());
+        assertEquals("Sebral jsem nuz.", hraTest.zpracujPrikaz("seber nuz"));
         hraTest.zpracujPrikaz("jdi domov");
         assertFalse(hraTest.konecHry());
         assertEquals("domov", hraTest.getHerniPlan().getAktualniProstor().getNazev());
