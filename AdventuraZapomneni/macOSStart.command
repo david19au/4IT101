@@ -1,12 +1,10 @@
 #!/bin/bash
 #
-# This script is meant as supportive start script for
-# UNIX-like systems, e.g., Linux or macOS
+# This script is meant as supportive start script for macOS systems.
 #
-# Tento pomocný spouštěcí skript je určen pro UNIXové systémy (např. Linux, macOS)
+# Tento pomocný spouštěcí skript je určen pro systémy s macOS.
 #
 echo "Spouštění hry..."
 
-relpath=$0
-cd ${relpath%`basename $0`}
-java -jar /out/artifacts/AdventuraZapomneni_jar/AdventuraZapomneni.jar
+install_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+java -jar "$install_dir/out/artifacts/AdventuraZapomneni_jar/AdventuraZapomneni.jar"
