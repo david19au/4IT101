@@ -49,7 +49,7 @@ public class TextoveRozhrani {
 
         System.out.println(hra.vratEpilog());
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in)); //BufferedReader
-        in.readLine(); //vyžaduje input, který může být libovolný
+        in.readLine(); //vyžaduje input, který může být libovolný, klidně i prázdný
     }
 
     /**
