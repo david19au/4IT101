@@ -31,10 +31,9 @@ public class TextoveRozhrani {
      * Hlavní metoda hry. Vypíše úvodní text a pak opakuje čtení a zpracování
      * příkazu od hráče do konce hry (dokud metoda konecHry() z logiky nevrátí
      * hodnotu true).
-     *
+     * <p>
      * Nakonec vypíše text epilogu, přičemž hra se poté ukončí stisknutím libovolného tlačítka díky 'BufferedReader' a
      * 'in.readLine()', který čeká na stisk tlačítka.
-     *
      */
     public void hraj() throws IOException {
         System.out.println(hra.vratUvitani());
