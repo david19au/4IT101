@@ -13,8 +13,8 @@ import cz.vse.zapomneni.logika.IHra;
  * Tato třída vytváří instanci třídy Hra, která představuje logiku aplikace.
  * Čte vstup zadaný uživatelem a předává tento řetězec logice a vypisuje odpověď logiky na konzoli.
  *
- * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- * @version pro školní rok 2016/2017
+ * @author Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Trong Dat Luu
+ * @version LS 2021/22
  */
 
 public class TextoveRozhrani {
