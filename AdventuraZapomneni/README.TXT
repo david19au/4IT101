@@ -2,7 +2,7 @@
 @version 1.0
 Vytvořeno pro kurz 4IT101 v LS 2021/22.
 
-Jednoduchá textová hra, která se jmenuje "Zapomnění."
+Jednoduchá textová hra, která se jmenuje "Zapomnění".
 Hráč ovládá postavu, která se trápí s psychickými problémy a pocity bezcennosti.
 Začíná se v prostorech domova postavy, ze které se hráč může pohybovat do různých prostorů a sbírat některé věci.
 Hra nemá jasně daný cíl, je čistě na hráči, co s postavou udělá.
