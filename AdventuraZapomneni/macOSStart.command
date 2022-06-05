@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# This script is meant as supportive start script for macOS systems.
+# This script is meant as supportive start script for macOS and UNIX systems.
 #
-# Tento pomocný spouštěcí skript je určen pro systémy s macOS.
+# Tento pomocný spouštěcí skript je určen pro systémy s macOS nebo UNIX.
 #
 echo "Spouštění hry..."
 
