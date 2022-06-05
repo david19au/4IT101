@@ -32,7 +32,7 @@ class PrikazNapoveda implements IPrikaz {
      */
     @Override
     public String provedPrikaz(String... parametry) {
-        return "Vaším úkolem je se rozhodovat za postavu.\nMůžete učinit různými akcemi, jako například sebrání věcí, procházením prostorů či provedem akce, která je dostupná jen za určitých okolností.\nKaždá akce může nést nějaký následek.\n" + platnePrikazy.vratNazvyPrikazu();
+        return "Vaším úkolem je se rozhodovat za postavu.\nMůžete tak učinit různými akcemi, jako například sebrání věcí, procházením prostorů či provedením akce, která je dostupná jen za určitých okolností.\nKaždá akce může nést nějaký následek.\n" + platnePrikazy.vratNazvyPrikazu();
     }
 
     /**

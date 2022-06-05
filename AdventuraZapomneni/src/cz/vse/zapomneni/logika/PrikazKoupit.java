@@ -39,7 +39,7 @@ public class PrikazKoupit implements IPrikaz {
     public String provedPrikaz(String... parametry) {
         if (parametry.length == 0 && (herniPlan.getAktualniProstor().getNazev().equals("drogovy_dealer")) && (inventar.obsahujeVInventari("penize"))) {
             hra.setKonecHry(true);
-            return "Postava si koupila drogy ze svých posledních úspor.\nDealer dal postavě opiody, které byly přimíchané fentanylem, o kterých nikdo nevěděl.\nPostava si vzala drogy a zanedlouho se jí udělalo špatně a chtělo se jí spát.\nNečekala ale, že tohle bude již věčný spánek, protože se jí zpomaloval tep a i dýchání.\nEfekty předávkování fentanylem jsou velmi rychlé a nikdo nestihl postavě pomoct.\nBrzy leží postava bezvládně na zemi, mrtvá, předávkovaná fentanylem.";
+            return "Postava si koupila drogy ze svých posledních úspor.\nDealer dal postavě opiody, které byly přimíchané fentanylem, o kterých ale nikdo nevěděl.\nPostava si vzala drogy a zanedlouho se jí udělalo špatně a chtělo se jí spát.\nNečekala ale, že tohle bude již věčný spánek, protože se jí zpomaloval tep a i dýchání.\nEfekty předávkování fentanylem jsou velmi rychlé a nikdo nestihl postavě pomoct.\nBrzy leží postava bezvládně na zemi, mrtvá, předávkovaná fentanylem.";
         } else if (parametry.length >= 1 && (herniPlan.getAktualniProstor().getNazev().equals("drogovy_dealer"))) {
             return "Prosím použijte příkaz bez parametrů, děkuji.";
         }
