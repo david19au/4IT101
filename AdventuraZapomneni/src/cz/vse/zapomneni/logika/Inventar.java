@@ -7,7 +7,7 @@ import java.util.Map;
  * Pomocí třídy Inventar realizuje hra inventář postavy/hráče. V inventáři může postava nosit určité předměty.
  * Funkcionalita je zajištěna pomocí mapy s věcmi, která obsahuje to co má u sebe hráč. Postava/hráč může u sebe mít jenom
  * limitovaný počet věcí, nastavený v atributu "MAXIMALNI_KAPACITA" - v našem případě může nosit maximálně 2 věci u sebe.
- * Pokus o přidání 6. věci se nepodaří.
+ * Pokus o přidání 3. věci se nepodaří.
  *
  * @author Trong Dat Luu
  * @version LS 2021/22
