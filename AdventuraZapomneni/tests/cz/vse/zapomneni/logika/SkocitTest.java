@@ -41,7 +41,7 @@ public class SkocitTest {
 
     /**
      * Metoda 'testSkocitStrecha' kontroluje, že příkaz funguje pokud chce postava skočit ze střechy ve škole.
-     * Skok z míst, kde to není dovolené se nepodaří (zde prostor 'domov').
+     * Skok z míst, kde to není dovolené se nepodaří (zde prostor 'domov' anebo 'skola').
      * Dále kontroluje, že hra se správně ukončí při povedeném skoku.
      */
     @Test
