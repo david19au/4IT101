@@ -46,7 +46,7 @@ public class InventarTest {
         assertTrue(inventarTest.obsahujeVInventari("Vec1"));
         assertTrue(inventarTest.obsahujeVInventari("Vec2"));
         assertFalse(inventarTest.obsahujeVInventari("Vec3"));
-        inventarTest.odebraniVeciZInv(vecTest2);
+        inventarTest.odebraniVeciZInv("Vec2");
         assertEquals(1, inventarTest.getPocetVeci());
         inventarTest.vlozeniVeciDoInv(vecTest3);
         assertEquals(2, inventarTest.getPocetVeci());

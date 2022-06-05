@@ -59,12 +59,12 @@ public class Inventar {
 
     /**
      * Metoda odebere věc z inventáře.
-     *
-     * @param vec věc co se má odebrat.
+     * @param jmenoVeci jméno věci co se má odebrat
+     * @return vrací odebranou věc
      */
-    public void odebraniVeciZInv(Vec vec) {
+    public Vec odebraniVeciZInv(String jmenoVeci) {
         pocetVeci--;
-        mapaSVecmi.remove(vec.getNazev());
+        return mapaSVecmi.remove(jmenoVeci);
     }
 
     /**
