@@ -12,7 +12,7 @@ Hra je napsaná v Javě, na spuštění je potřeba mít nainstalovanou verzi Ja
 Hra se na Windows systémech dá spustit pomocí souboru "WindowsStart.bat".
 
 Na macOS a UNIX systémech může být hra spuštěna pomocí souboru "macOSStart.command".
+Na macOS dostanete upozornění při otevření souboru, že pochází od neznámého vývojáře – pokud se Vám toto stane, klikněte pravým na soubor, dejte otevřít a znovu otevřít.
+Pokud dostanete na macOS chybu o poškozeném souboru, přejděte rovnou na manuální spuštění.
 Může se stát, že bude potřeba přiřadit souboru oprávnění pro spuštění, to uděláte přes terminál, kde napíšete "chmod +x " a přetáhnete soubor.
-Bohužel na macOS může stále být problém se spuštěním, jelikož Apple Quarantine může označit soubor za podezřelý a ani po nastavení "chmod +x" nepůjde soubor spustit.
-V tomto případě napište do terminálu "java -jar " a přetáhněte .jar soubor ze složky "/out/artifacts/AdventuraZapomneni_jar/".
 Hra lze samozřejmě spustit manuálně navigováním konzole/terminálu do složky "/out/artifacts/AdventuraZapomneni_jar/" a zadáním příkazu "java -jar AdventuraZapomneni.jar".
