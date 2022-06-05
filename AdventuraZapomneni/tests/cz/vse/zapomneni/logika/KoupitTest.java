@@ -39,8 +39,8 @@ public class KoupitTest {
     }
 
     /**
-     * Metoda 'testPovedenyNakupDrog' prověřuje, že se drogy nedají nakoupit mimo prostoru 'drogovy_dealer'.
-     * Dále testují, že se drogy dají koupit, pokud má postava v inventáři peníze a pokud je drogového dealera.
+     * Metoda 'testPovedenyNakupDrog' prověřuje, že se drogy nedají nakoupit mimo prostor 'drogovy_dealer'.
+     * Dále testují, že se drogy dají koupit, pokud má postava v inventáři peníze a pokud je u drogového dealera.
      * V tomto případě se hra ukončí.
      */
     @Test
